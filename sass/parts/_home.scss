@@ -1,0 +1,385 @@
+.header-section{
+    text-align: center;
+    padding-bottom: 60px;
+
+    .about-section{
+    color: $graycolor;
+    font-size: 13px;
+    font-weight: 600;
+    &::after{
+    content: '';
+    background-color: black;
+    height: 4px;
+    margin: auto;
+    margin-top: 12px;
+    display: block;
+    width: 50px;
+    border-radius: 5px;
+    }
+    }
+}
+
+.wrapper{
+    padding: 0 20px;
+    max-width: 1180px;;
+    margin: auto;
+}
+section{
+    justify-content: center;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    font-size: 20px;
+    border-radius: 50%;
+    padding: 20px;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#header {
+    padding: 10px 0;
+    .bg-light{
+        background-color: white!important;
+    }
+    .img{
+        padding: 16px 0;
+    }
+    .navbar-nav{
+        background-color:  white!important;
+        font-size: 14px;
+        font-weight: 500;
+        padding-top: 15px;
+        i{
+            font-size: 10px;
+        }
+        span{
+        border: 0;
+        color:  white;
+        font-size: 10px;
+        padding: 0 5px;
+        font-weight: 700;
+        background-color: $redcolor;
+        }
+        li{
+            margin-right: 20px;
+        }
+    }
+}
+
+#Find-awesome-deals{
+    background-color: #eef0ef;
+    padding: 60px 0;
+    .header-section-search{
+        h1{
+            font-weight: 700;
+        }
+        span{
+            font-weight: 400;
+        }
+        .about-section-search{
+            color: $graycolor;
+            font-size: 20px;
+        }
+    }
+    .search{
+        margin: 0;
+        padding: 30px 0;
+        p{
+            width: 100%;
+            padding: 14px 10px;;
+            // margin-top: 10px;
+            background-color: white;
+            // padding: 16px 20px 16px;
+            border-radius: 3px;
+            border: 1px solid rgb(214, 212, 212);
+            font-weight: 500;
+            .fa-location-arrow{
+                font-size: 12px;
+                margin-right: 5px;
+            }
+            .fa-caret-down{
+                float: right;
+                margin-top: 5px;
+                color: $graycolor;
+            }
+        }
+        .get-location{
+            position: absolute;
+            right: 30px;
+            top: 10px;
+            border-radius: 4px;
+            border: 0px;
+            padding: 5px 10px 7px;
+            background-color: #ebebeb;
+            font-size: 13px;
+            color: gray;
+            font-weight: 600;
+
+        }
+
+        input{
+            width: 100%;
+            padding: 13px 15px 14px;
+            border-radius: 2px;
+            border: 1px solid rgb(214, 212, 212);
+        }
+        .search-button{
+            border-color: #eef0ef;
+            width: 100%;
+            background-color: $redcolor;
+            color: white;
+            padding: 14px 5px;
+            border-radius: 2px;
+            font-weight: 500;
+
+            
+        }
+    }
+    .mini-slider{
+        .text-mini-header{
+            margin-left: 15px; 
+            margin-bottom: 10px;
+        }
+        .item{
+            border: 1px solid white;
+            background-color: white;
+            margin: 0 3px;
+            border-radius: 5px;
+            .img{
+                margin-top: 8px;
+                width: 50%;
+                border-radius: 50%;
+                overflow: hidden;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 10px;
+            }
+            .name-mael{
+                color: $redcolor;
+                font-size: 12px;
+                margin-bottom: 3px;
+            }
+            .count-meal{
+                color: $graycolor;
+                font-size: 12px;
+            }
+            a:hover{
+                text-decoration: none;
+            }
+            &:hover{
+                border: 1px solid red;
+            }
+        }
+    }
+}
+#carouselExampleIndicators{
+    width: 100%;
+}
+.mean-carousel{
+    width: 360px;
+    img{
+        min-width: 330px;
+    }
+}
+
+#offer{
+    padding: 60px 0;
+    img{
+        width: 100%;
+        }
+}
+
+#popular-brands{
+    padding: 60px 0;
+    background-color: #f3f7f8;
+        .item{
+            padding: 9px;
+            background-color: white;
+            img{
+                width: 100%;
+            }
+            .under-image{
+                padding: 15px;
+                box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+                .name-meal{
+                    color: black;
+                    font-weight: 600;
+                    &:hover{
+                        text-decoration: none;
+                        color: #007bff;
+                    }
+                }
+                .about-meal{
+                    font-size: 13px;
+                    color: $graycolor;
+                    font-weight: 600;
+                }
+                .time-delivery{
+                    color: rgb(102, 102, 102);
+                    font-size: 13px;
+                    font-weight: 700;
+
+                    i{
+                        font-size: 12px;
+                    }
+                }
+                .priece-delivery{
+                    margin-top: 4px;
+                    float: right;
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: rgb(156, 156, 156);
+                }
+                .cupon{
+                    color: gray;
+                    font-size: 10px;
+                    font-weight: 700;
+                    margin-top: 10px;
+                    margin-bottom: 0;
+                    span{
+                        color: white;
+                        background-color: #3ecf8e;
+                        border-radius: 4px;
+                        cursor: default;
+                    }
+                }
+            }
+        }
+}
+
+#become-member{
+    padding: 60px 0;
+    .btn{
+        background-color: #3ecf8e;
+        color: white;
+        size: 16px;
+        font-weight: 700;
+        padding: 15px 35px;
+        letter-spacing: 1px;
+        i{
+            font-size: 10px;
+            color: #3ecf8e;
+            background-color: white;
+            border-radius: 50%;
+            padding: 3px 3px 1.5px 4px;
+        }
+    }
+}
+
+footer{
+    border-top: 1px solid rgb(204, 204, 204);
+    .work-with-us{
+        margin: 0;
+        padding: 60px 0;
+        font-size: 20px;
+        font-weight: 600;
+        a{
+            color: $redcolor;
+            &:hover{
+                text-decoration: none;
+                color: #007bff;
+            }
+        }
+    }
+
+    #subscribe{
+        background-color: #EDF1F4;
+        padding: 60px;
+        font-size: 10px;
+        .header-items{
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            font-size: 15px;
+        }
+        form{
+            input{
+                border: 1px solid rgb(204, 204, 204);
+                border-radius: 3px;
+                padding: 10px;
+                width: 60%;
+            }
+            button{
+                background-color: $redcolor;
+                border: none;
+                color: white;
+                font-size: 15px;
+                padding: 5.5px 10px 9px;
+                margin-left: -10px;
+                width: 30%;
+            }
+        }
+        .register-link{
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 10px;
+            color: $graycolor;
+            .blue{
+                color: #17a2b8;
+                &:hover{
+                    color: #177c8b;
+                    text-decoration: none;
+                }
+            }
+            .red{
+                color: $redcolor;
+                &:hover{
+                    color: #007bff;
+                    text-decoration: none;
+                }
+            }
+        }
+        .header-stores{
+            font-size: 13px;
+            font-weight: 600;
+            color: $graycolor;
+            margin-bottom: 7px;
+        }
+        ul{
+            list-style: none;
+            padding: 0;
+            li{
+                margin-top: 8px;
+                font-size: 12px;
+                font-weight: 700;
+                color: #6c8293;
+            }
+        }
+    }
+
+    #countries-foods{
+        background-color: white;
+        padding: 60px;
+        P{
+            color: rgb(22, 22, 22);
+            font-size: 13px;
+            font-weight: 600;
+        }
+        a{
+            color: rgb(112, 112, 112);
+            font-size: 12px;
+            font-weight: 600;
+        }
+    }    
+
+    #end-footer{
+        background-color: #f0f4f7;
+        padding: 30px;
+        p{
+            margin: 0;
+            font-size: 13px;
+            font-weight: 600;
+            color: $graycolor;
+        }
+        span {
+            font-size: 12px;
+            font-weight: 600;
+            i{
+                color: $redcolor;
+            }
+        }
+    }
+}

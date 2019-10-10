@@ -1,0 +1,35 @@
+@media screen and (max-width: 1198px) {
+    header li{
+        margin-right: 10px!important;
+    }
+    footer #subscribe .col-xl-5{
+        margin-bottom: 50px;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+    #Find-awesome-deals{
+        height: 1020px;
+    }
+    #Find-awesome-deals .col-md-7{
+        padding: 0;
+        margin-bottom: 15px;
+    }
+
+    #Find-awesome-deals .mean-carousel{
+        margin-top: 30px;
+    }
+
+    #offer .item{
+        margin-bottom: 15px;
+    }
+
+    footer #subscribe{
+        padding: 60px 0;
+    }
+
+    
+
+}
