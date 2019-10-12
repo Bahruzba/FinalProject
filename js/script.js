@@ -113,8 +113,16 @@ $(document).on("click", "#offers .item .body-tab-menu i", function(){
 
 
 
+    function sliderToRight() {
+        sliderText();
+        if ($("#slider .show").next().length != 0) {
+            $("#slider .show").removeClass("show").next().addClass("show");
+        } else {
+            $("#slider .show").removeClass("show");
+            $(".slider-item:first-child").addClass("show");
+        }
+    }
 
 
 
-    
   });
