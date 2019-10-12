@@ -107,33 +107,35 @@ section {
       padding: 14px 5px;
       border-radius: 2px;
       font-weight: 500; }
-  #Find-awesome-deals .mini-slider .text-mini-header {
-    margin-left: 15px;
+
+.mini-slider .text-mini-header {
+  margin-left: 15px;
+  margin-bottom: 10px; }
+.mini-slider .item {
+  box-shadow: 0px 0rem 7px 3px rgba(0, 0, 0, 0.075);
+  border: 1px solid white;
+  background-color: white;
+  margin: 0 3px;
+  border-radius: 5px; }
+  .mini-slider .item .img {
+    margin-top: 8px;
+    width: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 10px; }
-  #Find-awesome-deals .mini-slider .item {
-    border: 1px solid white;
-    background-color: white;
-    margin: 0 3px;
-    border-radius: 5px; }
-    #Find-awesome-deals .mini-slider .item .img {
-      margin-top: 8px;
-      width: 50%;
-      border-radius: 50%;
-      overflow: hidden;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 10px; }
-    #Find-awesome-deals .mini-slider .item .name-mael {
-      color: #ff3008;
-      font-size: 12px;
-      margin-bottom: 3px; }
-    #Find-awesome-deals .mini-slider .item .count-meal {
-      color: #7a7e8a;
-      font-size: 12px; }
-    #Find-awesome-deals .mini-slider .item a:hover {
-      text-decoration: none; }
-    #Find-awesome-deals .mini-slider .item:hover {
-      border: 1px solid red; }
+  .mini-slider .item .name-mael {
+    color: #ff3008;
+    font-size: 12px;
+    margin-bottom: 3px; }
+  .mini-slider .item .count-meal {
+    color: #7a7e8a;
+    font-size: 12px; }
+  .mini-slider .item a:hover {
+    text-decoration: none; }
+  .mini-slider .item:hover {
+    border: 1px solid red; }
 
 #carouselExampleIndicators {
   width: 100%; }
@@ -194,6 +196,7 @@ section {
           cursor: default; }
 
 #become-member {
+  border-bottom: 1px solid #cccccc;
   padding: 60px 0; }
   #become-member .btn {
     background-color: #3ecf8e;
@@ -209,91 +212,89 @@ section {
       border-radius: 50%;
       padding: 3px 3px 1.5px 4px; }
 
-footer {
-  border-top: 1px solid #cccccc; }
-  footer .work-with-us {
-    margin: 0;
-    padding: 60px 0;
-    font-size: 20px;
-    font-weight: 600; }
-    footer .work-with-us a {
+footer .work-with-us {
+  margin: 0;
+  padding: 60px 0;
+  font-size: 20px;
+  font-weight: 600; }
+  footer .work-with-us a {
+    color: #ff3008; }
+    footer .work-with-us a:hover {
+      text-decoration: none;
+      color: #007bff; }
+footer #subscribe {
+  background-color: #EDF1F4;
+  padding: 60px;
+  font-size: 10px; }
+  footer #subscribe .header-items {
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    font-size: 15px; }
+  footer #subscribe form input {
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    padding: 10px;
+    width: 60%; }
+  footer #subscribe form button {
+    background-color: #ff3008;
+    border: none;
+    color: white;
+    font-size: 15px;
+    padding: 5.5px 10px 9px;
+    margin-left: -10px;
+    width: 30%; }
+  footer #subscribe .register-link {
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 10px;
+    color: #7a7e8a; }
+    footer #subscribe .register-link .blue {
+      color: #17a2b8; }
+      footer #subscribe .register-link .blue:hover {
+        color: #177c8b;
+        text-decoration: none; }
+    footer #subscribe .register-link .red {
       color: #ff3008; }
-      footer .work-with-us a:hover {
-        text-decoration: none;
-        color: #007bff; }
-  footer #subscribe {
-    background-color: #EDF1F4;
-    padding: 60px;
-    font-size: 10px; }
-    footer #subscribe .header-items {
-      font-weight: 600;
-      letter-spacing: -0.5px;
-      font-size: 15px; }
-    footer #subscribe form input {
-      border: 1px solid #cccccc;
-      border-radius: 3px;
-      padding: 10px;
-      width: 60%; }
-    footer #subscribe form button {
-      background-color: #ff3008;
-      border: none;
-      color: white;
-      font-size: 15px;
-      padding: 5.5px 10px 9px;
-      margin-left: -10px;
-      width: 30%; }
-    footer #subscribe .register-link {
-      font-size: 13px;
-      font-weight: 600;
-      margin-top: 10px;
-      color: #7a7e8a; }
-      footer #subscribe .register-link .blue {
-        color: #17a2b8; }
-        footer #subscribe .register-link .blue:hover {
-          color: #177c8b;
-          text-decoration: none; }
-      footer #subscribe .register-link .red {
-        color: #ff3008; }
-        footer #subscribe .register-link .red:hover {
-          color: #007bff;
-          text-decoration: none; }
-    footer #subscribe .header-stores {
-      font-size: 13px;
-      font-weight: 600;
-      color: #7a7e8a;
-      margin-bottom: 7px; }
-    footer #subscribe ul {
-      list-style: none;
-      padding: 0; }
-      footer #subscribe ul li {
-        margin-top: 8px;
-        font-size: 12px;
-        font-weight: 700;
-        color: #6c8293; }
-  footer #countries-foods {
-    background-color: white;
-    padding: 60px; }
-    footer #countries-foods P {
-      color: #161616;
-      font-size: 13px;
-      font-weight: 600; }
-    footer #countries-foods a {
-      color: #707070;
+      footer #subscribe .register-link .red:hover {
+        color: #007bff;
+        text-decoration: none; }
+  footer #subscribe .header-stores {
+    font-size: 13px;
+    font-weight: 600;
+    color: #7a7e8a;
+    margin-bottom: 7px; }
+  footer #subscribe ul {
+    list-style: none;
+    padding: 0; }
+    footer #subscribe ul li {
+      margin-top: 8px;
       font-size: 12px;
-      font-weight: 600; }
-  footer #end-footer {
-    background-color: #f0f4f7;
-    padding: 30px; }
-    footer #end-footer p {
-      margin: 0;
-      font-size: 13px;
-      font-weight: 600;
-      color: #7a7e8a; }
-    footer #end-footer span {
-      font-size: 12px;
-      font-weight: 600; }
-      footer #end-footer span i {
-        color: #ff3008; }
+      font-weight: 700;
+      color: #6c8293; }
+footer #countries-foods {
+  background-color: white;
+  padding: 60px; }
+  footer #countries-foods P {
+    color: #161616;
+    font-size: 13px;
+    font-weight: 600; }
+  footer #countries-foods a {
+    color: #707070;
+    font-size: 12px;
+    font-weight: 600; }
+footer #end-footer {
+  background-color: #f0f4f7;
+  padding: 30px; }
+  footer #end-footer p {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 600;
+    color: #7a7e8a; }
+  footer #end-footer span {
+    font-size: 12px;
+    font-weight: 600; }
+    footer #end-footer span i {
+      color: #ff3008; }
 
 #register {
   background-image: url("/img/register.png");
@@ -336,5 +337,215 @@ footer {
       .form .text-center a:hover {
         text-decoration: none;
         color: #6363bd; }
+
+#header-pages {
+  background-color: black;
+  padding: 60px 0; }
+  #header-pages .about-section {
+    font-size: 16px; }
+
+#available-coupons {
+  padding-top: 60px;
+  background-color: #f3f7f8; }
+  #available-coupons .items .item {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    padding: 25px;
+    background-color: white; }
+    #available-coupons .items .item .cart-icon {
+      border: 1px dotted #daceb7;
+      background-color: #fffae6;
+      width: fit-content;
+      padding: 5px;
+      border-radius: 2px; }
+      #available-coupons .items .item .cart-icon .img {
+        padding: 2px;
+        width: 25px; }
+        #available-coupons .items .item .cart-icon .img::before {
+          content: '';
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 6px 5px 0 5px;
+          border-color: #daceb7 transparent transparent transparent;
+          position: absolute;
+          left: 73px;
+          top: 25px; }
+        #available-coupons .items .item .cart-icon .img::after {
+          content: '';
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 0 5px 6px 5px;
+          border-color: #daceb7 transparent #daceb7 transparent;
+          position: absolute;
+          left: 73px;
+          top: 59px; }
+        #available-coupons .items .item .cart-icon .img img {
+          margin-top: -3px;
+          border-radius: 50%;
+          width: 100%; }
+      #available-coupons .items .item .cart-icon .name-cart {
+        padding: 2px 2px 2px 15px;
+        font-weight: 600;
+        color: #17a2b8; }
+    #available-coupons .items .item h6 {
+      color: #7c7c7c; }
+    #available-coupons .items .item .copy-more a {
+      color: #ff3008;
+      font-weight: 600; }
+
+#bank-offers {
+  padding: 60px 0;
+  background-color: #f3f7f8; }
+  #bank-offers .item {
+    background-color: white;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    padding: 25px;
+    height: 200px; }
+    #bank-offers .item .img img {
+      width: 100%;
+      border-radius: 50%; }
+    #bank-offers .item .about-offer {
+      padding-left: 40px; }
+      #bank-offers .item .about-offer p {
+        color: #7a7e8a;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 18px;
+        height: 50px;
+        margin: 15px 0 0 0; }
+      #bank-offers .item .about-offer span {
+        font-size: 12px;
+        color: #17a2b8;
+        font-weight: 600; }
+
+#offers {
+  background-color: #f3f7f8;
+  padding: 60px 0; }
+  #offers h4 span {
+    font-weight: 500;
+    font-size: 16px;
+    margin-left: 10px; }
+  #offers .dropdown button {
+    color: #17a2b8;
+    border: 1px solid #17a2b8; }
+  #offers .col-md-3 .filters {
+    background-color: white;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); }
+    #offers .col-md-3 .filters h5 {
+      margin: 0;
+      padding: 20px;
+      font-weight: 600; }
+    #offers .col-md-3 .filters .item {
+      overflow: hidden;
+      padding: 20px;
+      border-top: 1px solid #d6d6d6; }
+      #offers .col-md-3 .filters .item .header-tab-menu {
+        color: #007bff;
+        font-weight: 600; }
+      #offers .col-md-3 .filters .item .body-tab-menu ul {
+        list-style-type: none;
+        padding: 20px 0 0 0; }
+        #offers .col-md-3 .filters .item .body-tab-menu ul li {
+          font-size: 13px;
+          position: relative;
+          padding-top: 5px;
+          font-weight: 600;
+          color: #252525;
+          cursor: pointer; }
+          #offers .col-md-3 .filters .item .body-tab-menu ul li span {
+            font-weight: 500;
+            color: gray;
+            font-size: 12px; }
+          #offers .col-md-3 .filters .item .body-tab-menu ul li i {
+            border: 1px solid #bdbdbd;
+            color: white;
+            border-radius: 2px;
+            margin-right: 5px;
+            padding: 3px;
+            font-size: 8px; }
+          #offers .col-md-3 .filters .item .body-tab-menu ul li .select {
+            background-color: #007bff;
+            border-color: #007bff;
+            box-shadow: 0px 0rem 0px 3px #007bff3d; }
+    #offers .col-md-3 .filters input {
+      margin: 12px 0; }
+    #offers .col-md-3 .filters .text-notification {
+      color: #3ecf8e;
+      font-size: 10px;
+      font-weight: 700;
+      border-top: 1px solid #a8a8a8;
+      margin-top: 10px;
+      padding-top: 20px;
+      line-height: 20px; }
+  #offers .col-md-4 .item {
+    height: unset;
+    box-shadow: 0px 0rem 7px 3px rgba(0, 0, 0, 0.075);
+    background-color: white; }
+    #offers .col-md-4 .item img {
+      width: 100%; }
+    #offers .col-md-4 .item .under-image {
+      padding: 15px; }
+      #offers .col-md-4 .item .under-image .name-meal {
+        color: black;
+        font-weight: 600; }
+        #offers .col-md-4 .item .under-image .name-meal:hover {
+          text-decoration: none;
+          color: #007bff; }
+      #offers .col-md-4 .item .under-image .about-meal {
+        font-size: 13px;
+        color: #7a7e8a;
+        font-weight: 600; }
+      #offers .col-md-4 .item .under-image .time-delivery {
+        color: #666666;
+        font-size: 13px;
+        font-weight: 700; }
+        #offers .col-md-4 .item .under-image .time-delivery i {
+          font-size: 12px; }
+      #offers .col-md-4 .item .under-image .priece-delivery {
+        margin-top: 4px;
+        float: right;
+        font-size: 12px;
+        font-weight: 600;
+        color: #9c9c9c; }
+      #offers .col-md-4 .item .under-image .cupon {
+        color: gray;
+        font-size: 10px;
+        font-weight: 700;
+        margin-top: 10px;
+        margin-bottom: 0; }
+        #offers .col-md-4 .item .under-image .cupon span {
+          color: white;
+          background-color: #3ecf8e;
+          border-radius: 4px;
+          cursor: default; }
+  #offers .loading {
+    position: relative;
+    background-color: #ff3008;
+    color: white;
+    font-weight: 600; }
+    #offers .loading::before {
+      content: '';
+      position: absolute;
+      background-color: white;
+      padding: 1px;
+      border-radius: 50%;
+      left: 20px;
+      top: 18px;
+      animation: loading 0.7s infinite; }
+
+@keyframes loading {
+  from {
+    height: 1px;
+    width: 1px;
+    top: 18px;
+    left: 20px;
+    opacity: 4; }
+  to {
+    height: 15px;
+    width: 15px;
+    top: 11px;
+    left: 13px;
+    opacity: 0; } }
 
 /*# sourceMappingURL=style.css.map */
