@@ -77,7 +77,7 @@
                 margin: 12px 0;
             }
             .text-notification{
-                color:#3ecf8e;
+                color:$greencolor;
                 font-size: 10px;
                 font-weight: 700;
                 border-top: 1px solid rgb(168, 168, 168);
@@ -134,7 +134,7 @@
                 margin-bottom: 0;
                 span{
                     color: white;
-                    background-color: #3ecf8e;
+                    background-color: $greencolor;
                     border-radius: 4px;
                     cursor: default;
                 }

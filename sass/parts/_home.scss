@@ -21,7 +21,7 @@
 
 .wrapper{
     padding: 0 20px;
-    max-width: 1180px;;
+    width: 1180px;;
     margin: auto;
 }
 section{
@@ -283,7 +283,7 @@ section{
                     margin-bottom: 0;
                     span{
                         color: white;
-                        background-color: #3ecf8e;
+                        background-color: $greencolor;
                         border-radius: 4px;
                         cursor: default;
                     }
@@ -297,7 +297,7 @@ section{
 
     padding: 60px 0;
     .btn{
-        background-color: #3ecf8e;
+        background-color: $greencolor;
         color: white;
         size: 16px;
         font-weight: 700;
@@ -305,7 +305,7 @@ section{
         letter-spacing: 1px;
         i{
             font-size: 10px;
-            color: #3ecf8e;
+            color: $greencolor;
             background-color: white;
             border-radius: 50%;
             padding: 3px 3px 1.5px 4px;

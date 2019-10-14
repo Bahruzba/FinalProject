@@ -1,4 +1,4 @@
-$('#Find-awesome-deals .owl-carousel').slick({
+$('.owl-carousel').slick({
     infinite: true,
     slidesToShow: 6,
     slidesToScroll: 1,
@@ -23,9 +23,9 @@ $('#Find-awesome-deals .owl-carousel').slick({
     ]
 });
 
-$('#popular-brands .owl-carousel').slick({
+$('#popular-brands .owl-carouse').slick({
     infinite: true,
-    slidesToShow: 2,
+    slidesToShow: 4,
     slidesToScroll: 1,
     prevArrow: false,
     nextArrow: false,
@@ -35,31 +35,6 @@ $('#popular-brands .owl-carousel').slick({
     responsive: [
         {
             breakpoint: 900,
-            settings: {
-                slidesToShow: 5,
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 3,
-            }
-        }
-    ]
-});
-
-$('#offers .owl-carousel').slick({
-    infinite: true,
-    slidesToShow: 8,
-    slidesToScroll: 1,
-    prevArrow: false,
-    nextArrow: false,
-    autoplay: true,
-    autoplaySpeed: 1000,
-    infinite: true,
-    responsive: [
-        {
-            breakpoint: 600,
             settings: {
                 slidesToShow: 5,
             }
@@ -111,18 +86,32 @@ $(document).on("click", "#offers .item .body-tab-menu i", function(){
 
 })
 
-
-
-    function sliderToRight() {
-        sliderText();
-        if ($("#slider .show").next().length != 0) {
-            $("#slider .show").removeClass("show").next().addClass("show");
-        } else {
-            $("#slider .show").removeClass("show");
-            $(".slider-item:first-child").addClass("show");
-        }
+$(document).on("click", "#body-tab-menu .count-item .plus", function(){
+    var count = Number($(this).prev().text());
+    $(this).prev().text(count+1);
+    if(count>18)
+    {
+        console.log("sss");
+        $(this).attr("disabled","");
     }
+})
+
+$(document).on("click", "#body-tab-menu .count-item .minus", function(){
+    var count = Number($(this).next().text());
+    
+    if(count>1){
+        $(this).next().text(count-1).next().removeAttr("disabled");
+    } else{
+        $(this).parent().addClass("d-none");
+        $(this).parent().prev().removeClass("d-none");
+    }
+})
+
+
+$(document).on("click", "#body-tab-menu .add", function(){
+    $(this).addClass("d-none").next().removeClass("d-none");
+});
 
 
 
-  });
+});

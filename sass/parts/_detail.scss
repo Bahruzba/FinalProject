@@ -1,0 +1,325 @@
+#header-restaurant{
+    background-image: url('/img/img-restaurant.png');
+    background-size: cover;
+    height: 424px;
+    box-shadow: inset 0px -12rem 150px -96px rgba(0, 0, 0, 0.8);
+    img{
+        width: 90%;
+        height: 90%;
+        border-radius: 3px;
+    }
+    .address, .kitchen{
+        font-weight: 700;
+        font-size: 12px;
+        margin-bottom: 5px;
+        span{
+            font-weight: 500;
+            border-radius: 3px;
+            font-size: 10px;
+            background-color: $greencolor;
+            padding: 1px 6px;
+        }
+    }
+
+    .delivery-time{
+        background-color: $greencolor;
+        padding: 10px 20px;
+        border-radius: 3px;
+    }
+    .reviews{
+        margin-top: 30px;
+        .star{
+            background-color: #ff5e00;
+            border-radius: 3px;
+            font-size: 13px;
+            padding: 1px 5px 4px 6px;
+            .fa-star{
+                font-size: 11px;
+            }
+        }
+        .raiting, .comments{
+            font-weight: 600;
+        }
+    }
+}
+
+#header-tab-menu{
+    ul{
+        padding-left: 0px;
+        li{
+            list-style-type: none;
+            display: inline-block;
+            padding: 15px 0;
+            margin: 0 20px;
+            font-weight: 700;
+            font-size: 13px;
+            color: rgb(83, 83, 83);
+            cursor: pointer;
+            transition: 0.1s;
+            border-bottom: 2px solid white;
+            &:hover{
+                border-bottom-color: #3868fb;
+                color: #3868fb;
+            }
+            
+        }
+    }
+    button{
+        background-color: transparent;
+        border: 0;
+        padding: 5px 10px 6px;
+        margin: 10px 2px;
+        font-size: 14px;
+        transition: 0.3s;
+        border-radius: 2px;
+        .fa-heart{
+            color: $redcolor;
+            font-size: 12px;
+        }
+        .fa-lemon{
+            color: $greencolor;
+            font-size: 11px;
+        }
+        .fa-percent{
+            font-size: 9px;
+            background-color: $redcolor;
+            color: white;
+            padding: 3px;
+            border-radius: 50%;
+            
+        }
+    }
+    .favorite:hover, .veg:hover{
+        background-color: rgb(224, 224, 224);
+    }
+    .offers{
+        border: 1px solid $redcolor;
+        padding: 4px 9px;
+        transition: 0.1s;
+        &:hover{
+            background-color: $redcolor;
+            color: white;
+            .fa-percent{
+                background-color: white;
+                color: $redcolor;
+            }
+        }
+    }
+}
+
+#body-tab-menu{
+    background-color: #f3f7f8;
+    .body-tab-menu{
+        .body-order-online{
+            margin: 30px;
+            .header-items{
+                margin: 50px 0 30px;
+            }
+            .recommended{
+                background-color: white;
+                box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);        
+                .search{
+                    input{
+                        padding: 25px;
+                        border-radius: 1px;
+                    }
+                    i{
+                        position: absolute;
+                        top: 107px;
+                        right: 75px;
+                        color: gray;
+                        padding: 10px;
+                        cursor: pointer;
+                    }
+                }
+                .header-carousel{
+                    font-weight: 600;
+                    span{
+                        color: white;
+                        background-color: $greencolor;
+                        padding: 2px 6px 4px;
+                        font-size: 11px;
+                        font-weight: 700;
+                        border-radius: 2px;
+                        i{
+                            font-size: 10px;
+                            margin-right: 3px;
+                        }
+                    }
+                }
+                .owl-carousel{
+                    .item{
+                        padding-bottom: 10px;
+                        border: 1px solid rgb(230, 230, 230);
+                        border-radius: 3px;
+                        img{
+                            width: 100%;
+                        }
+                        h6{
+                            margin-top: 10px;
+                            margin-bottom: 0px;
+                            font-size: 14px;
+                        }
+                        span{
+                            color: $redcolor;
+                            padding: 2px 10px;
+                            font-size: 10px;
+                            font-weight: 500;
+                            background-color: rgb(233, 233, 233);
+                            border-radius: 3px;
+                            transition: 0.1s;
+                            &:hover{
+                                background-color: $redcolor;
+                                color: white;
+                            }
+                        }
+                    }
+                }
+            }
+            .best-sellers{
+                .item{
+                    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+                    img{
+                        width: 100%;
+                    }
+                    .promoted{
+                        position: absolute;
+                        background-color: rgb(71, 71, 71);
+                        top: 12px;
+                        left: 25px;
+                        font-size: 11px;
+                        font-weight: 600;
+                        padding: 1px 5px 2px;
+                        border-radius: 2px;
+                    }
+                    .fa-heart{
+                        position: absolute;
+                        color: $redcolor;
+                        background-color: white;
+                        border-radius: 50%;
+                        padding: 6px 6px 5px 5px;
+                        font-size: 14px;
+                        top: 12px;
+                        right: 20px;
+                        transition: 0.1s;
+                        &:hover{
+                            color: #3868fb
+                        }
+                    }
+                    .reating{
+                        position: absolute;
+                        top: 180px;
+                        right: 25px;
+                        background-color: $greencolor;
+                        font-size: 11px;
+                        font-weight: 700;
+                        padding: 1px 5px 2px;
+                        border-radius: 2px;
+                        .fa-star{
+                            font-size: 10px;
+                        }
+                    }
+                    .about-item{
+                        background-color: white;
+                        padding: 15px;
+                        h6{
+                            font-size: 16px;
+                            font-weight: 600;
+                            margin: 0;
+                        }
+                        small{
+                            font-weight: 600;
+                            color: gray;
+                            font-size: 11px;
+                        }
+                        p{
+                            margin: 0;
+                            span{
+                                font-size: 9px;
+                                background-color: $greencolor;
+                                color: white;
+                                font-weight: 700;
+                                padding: 1px 4px;
+                                border-radius: 2px;
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            .items{
+                background-color: white;
+                box-shadow: 0 .125rem .25rem rgba(189, 189, 189, 0.075);   
+                .item{
+                    position: relative;
+                    padding: 20px;
+                    border:  1px solid rgb(197, 197, 197);
+                }           
+                img{
+                    width: 40px;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 15px;
+                    top: 24px;
+                }  
+                p{
+                    font-weight: 600;
+                    margin: 0 0 0 35px;
+                    span{
+                        background-color: $redcolor;
+                        padding: 2px;
+                        border-radius: 2px;
+                        font-size: 11px;
+                        font-weight: bold;
+                        color: white;
+                    }
+                }
+                small{
+                    margin-left: 35px;
+                    font-weight: 500;
+                    color: gray;
+                    
+                }
+                .fa-circle{
+                    top: 25px;
+                    position: absolute;
+                    font-size: 7px;
+                    border: 1px solid $redcolor;
+                    padding: 3px;
+                    color: $redcolor;
+                }
+            }
+            button{
+                padding-right: 8px;
+                height: 30px;
+                background-color: transparent;
+                font-size: 14px;
+                margin-top: 1px;
+                border: 1px solid;
+                margin: -2px 10px 0 0;
+                transition: 0.1s;
+            }
+            .count-item{
+                button{
+                    border: 1px solid gray;
+                    padding: 0;
+                    width: 25px;
+                    margin: -3px;
+                    height: 28px;
+                }
+                .count{
+                    background-color: gray;
+                    color: white;
+                }
+            }
+            button:hover{
+                color: white;
+                background-color: gray;
+            }
+            [disabled]:hover{
+                background-color: transparent;
+            }
+
+        }
+    }
+}
