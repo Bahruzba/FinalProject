@@ -11,13 +11,38 @@ $('.owl-carousel').slick({
         {
             breakpoint: 900,
             settings: {
-                slidesToShow: 5,
+                slidesToShow: 2,
             }
         },
         {
             breakpoint: 480,
             settings: {
                 slidesToShow: 3,
+            }
+        }
+    ]
+});
+
+$('.slider').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: false,
+    nextArrow: false,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    infinite: true,
+    responsive: [
+        {
+            breakpoint: 900,
+            settings: {
+                slidesToShow: 3,
+            }
+        },
+        {
+            breakpoint: 480,
+            settings: {
+                slidesToShow: 5,
             }
         }
     ]
@@ -83,9 +108,14 @@ $(document).on("click", "#offers .item .header-tab-menu", function(){
 $(document).on("click", "#offers .item .body-tab-menu i", function(){
     $(this).toggleClass("select");
     $("#offers .item .body-tab-menu i").addClass("")
-
 })
 
+//show count item
+$(document).on("click", "#body-tab-menu .add", function(){
+    $(this).addClass("d-none").next().removeClass("d-none");
+});
+
+//plus item count
 $(document).on("click", "#body-tab-menu .count-item .plus", function(){
     var count = Number($(this).prev().text());
     $(this).prev().text(count+1);
@@ -96,6 +126,7 @@ $(document).on("click", "#body-tab-menu .count-item .plus", function(){
     }
 })
 
+//minus item count
 $(document).on("click", "#body-tab-menu .count-item .minus", function(){
     var count = Number($(this).next().text());
     
@@ -107,11 +138,30 @@ $(document).on("click", "#body-tab-menu .count-item .minus", function(){
     }
 })
 
+//rating grafic
+function Start(){
+    var blue ="<div class='blue'></div>";
+    $(".body-ratings-reviews .star").append(blue);
+    for(var i=1;i<6; i++)
+    {
+        var a =Number($(".body-ratings-reviews .stars .s"+i+" small").text());
+        $(".body-ratings-reviews .stars .s"+i+" .blue").css("width",a+"%").prev().text(a+"%");
 
-$(document).on("click", "#body-tab-menu .add", function(){
-    $(this).addClass("d-none").next().removeClass("d-none");
-});
+    }
+}
+Start();
 
+//tab menu in restaurant detail
+$(document).on("click", "#header-tab-menu [tab-header]", function(){
+    $("#header-tab-menu [tab-header]").removeClass("active");
+    $(this).addClass("active");
+    var tab= $(this).attr("tab-header");
+    $("#body-tab-menu [tab-body]").removeClass("active");
+    setTimeout(function(){
+        $("#body-tab-menu [tab-body]").addClass("d-none");
+        $("#body-tab-menu [tab-body="+tab+"]").addClass("active").removeClass("d-none");
+    },300);
+})
 
 
 });

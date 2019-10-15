@@ -1,3 +1,15 @@
+.b-r {
+  background-color: #ff3008; }
+
+.c-r {
+  color: #ff3008; }
+
+.b-g {
+  background-color: #3ecf8e; }
+
+.c-g {
+  color: #3ecf8e; }
+
 .header-section {
   text-align: center;
   padding-bottom: 60px; }
@@ -582,6 +594,8 @@ footer #end-footer {
     #header-restaurant .reviews .raiting, #header-restaurant .reviews .comments {
       font-weight: 600; }
 
+#header-tab-menu .active {
+  border-bottom-color: #3868fb; }
 #header-tab-menu ul {
   padding-left: 0px; }
   #header-tab-menu ul li {
@@ -633,6 +647,17 @@ footer #end-footer {
 
 #body-tab-menu {
   background-color: #f3f7f8; }
+  #body-tab-menu .blog {
+    background-color: white;
+    margin: 30px 0;
+    padding: 25px;
+    border-radius: 3px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); }
+  #body-tab-menu .body-tab-menu [tab-body] {
+    opacity: 0;
+    transition: 0.3s; }
+  #body-tab-menu .body-tab-menu .active {
+    opacity: 1; }
   #body-tab-menu .body-tab-menu .body-order-online {
     margin: 30px; }
     #body-tab-menu .body-tab-menu .body-order-online .header-items {
@@ -797,5 +822,307 @@ footer #end-footer {
       background-color: gray; }
     #body-tab-menu .body-tab-menu .body-order-online [disabled]:hover {
       background-color: transparent; }
+  #body-tab-menu .body-tab-menu .body-gallery {
+    margin: 30px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); }
+    #body-tab-menu .body-tab-menu .body-gallery .slider {
+      background-color: white;
+      padding: 15px;
+      border-radius: 3px; }
+      #body-tab-menu .body-tab-menu .body-gallery .slider .img {
+        padding: 10px; }
+        #body-tab-menu .body-tab-menu .body-gallery .slider .img img {
+          width: 100%; }
+  #body-tab-menu .body-tab-menu .body-about-restaurant .info {
+    margin: 0;
+    border-bottom: 1px solid #dadada; }
+    #body-tab-menu .body-tab-menu .body-about-restaurant .info .address {
+      font-size: 12px;
+      font-weight: 600;
+      color: gray; }
+    #body-tab-menu .body-tab-menu .body-about-restaurant .info i {
+      margin-right: 15px;
+      font-size: 11px;
+      color: #ff3008; }
+    #body-tab-menu .body-tab-menu .body-about-restaurant .info p {
+      font-size: 13px;
+      font-weight: 600; }
+      #body-tab-menu .body-tab-menu .body-about-restaurant .info p span {
+        font-size: 9px;
+        background-color: #3ecf8e;
+        padding: 1px 3px;
+        color: white;
+        font-weight: bold;
+        border-radius: 2px; }
+  #body-tab-menu .body-tab-menu .body-about-restaurant .more {
+    margin: 25px 0; }
+    #body-tab-menu .body-tab-menu .body-about-restaurant .more h5 {
+      margin-bottom: 20px; }
+    #body-tab-menu .body-tab-menu .body-about-restaurant .more p {
+      font-size: 12px;
+      color: gray;
+      font-weight: 600; }
+    #body-tab-menu .body-tab-menu .body-about-restaurant .more button {
+      background-color: transparent;
+      border: 1px solid #dbdbdb;
+      font-weight: bold;
+      font-size: 13px;
+      padding: 5px 15px;
+      margin: 5px; }
+  #body-tab-menu .body-tab-menu .body-book-table h5 {
+    margin-top: 15px;
+    font-weight: 600; }
+  #body-tab-menu .body-tab-menu .body-book-table p {
+    margin: 15px 0 8px;
+    font-size: 13px;
+    font-weight: 600; }
+  #body-tab-menu .body-tab-menu .body-book-table button {
+    background-color: #ff3008;
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 7px 15px 8px;
+    border-radius: 2px;
+    margin-top: 15px;
+    margin-right: 16px; }
+  #body-tab-menu .body-tab-menu .body-ratings-reviews .rate-place p {
+    font-size: 24px;
+    color: #ff3008;
+    margin: 0; }
+    #body-tab-menu .body-tab-menu .body-ratings-reviews .rate-place p .fa-star {
+      transition: 0.1s; }
+      #body-tab-menu .body-tab-menu .body-ratings-reviews .rate-place p .fa-star:hover {
+        color: #3868fb; }
+  #body-tab-menu .body-tab-menu .body-ratings-reviews .ratings h4 {
+    margin-bottom: 20px; }
+  #body-tab-menu .body-tab-menu .body-ratings-reviews .ratings .fa-star {
+    color: #ff3008;
+    transition: 0.1s; }
+    #body-tab-menu .body-tab-menu .body-ratings-reviews .ratings .fa-star:hover {
+      color: #3868fb; }
+  #body-tab-menu .body-tab-menu .body-ratings-reviews .ratings p {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 15px 0 35px 0; }
+  #body-tab-menu .body-tab-menu .body-ratings-reviews .ratings .stars .star-cover {
+    position: relative;
+    height: 240px; }
+    #body-tab-menu .body-tab-menu .body-ratings-reviews .ratings .stars .star-cover .star {
+      position: relative;
+      left: 50px;
+      width: calc(100% - 100px);
+      height: 30px;
+      background-color: #eaf1f5;
+      align-items: center;
+      height: 30px;
+      margin: 15px 0; }
+      #body-tab-menu .body-tab-menu .body-ratings-reviews .ratings .stars .star-cover .star span {
+        position: absolute;
+        top: 6px;
+        left: -50px; }
+      #body-tab-menu .body-tab-menu .body-ratings-reviews .ratings .stars .star-cover .star small {
+        position: absolute;
+        top: 6px;
+        right: -50px; }
+      #body-tab-menu .body-tab-menu .body-ratings-reviews .ratings .stars .star-cover .star .blue {
+        width: 200px;
+        height: 30px;
+        background-color: #3868fb; }
+  #body-tab-menu .body-tab-menu .body-ratings-reviews .ratings .stars span {
+    font-size: 12px;
+    font-weight: 600; }
+  #body-tab-menu .body-tab-menu .body-ratings-reviews .ratings button {
+    background-color: transparent;
+    font-size: 15px;
+    color: #ff3008;
+    border: 1px solid #ff3008;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 2px;
+    transition: 0.2s; }
+    #body-tab-menu .body-tab-menu .body-ratings-reviews .ratings button:hover {
+      background-color: #ff3008;
+      color: white; }
+  #body-tab-menu .body-tab-menu .body-ratings-reviews .users-reviews .user-review {
+    padding: 30px 0;
+    border-bottom: 1px solid #c5c5c5; }
+    #body-tab-menu .body-tab-menu .body-ratings-reviews .users-reviews .user-review .img {
+      width: 9%;
+      margin-right: 20px; }
+      #body-tab-menu .body-tab-menu .body-ratings-reviews .users-reviews .user-review .img img {
+        width: 100%;
+        border-radius: 50%; }
+    #body-tab-menu .body-tab-menu .body-ratings-reviews .users-reviews .user-review .review {
+      width: 90%; }
+      #body-tab-menu .body-tab-menu .body-ratings-reviews .users-reviews .user-review .review .user-name p {
+        font-weight: 600;
+        margin-bottom: 0; }
+      #body-tab-menu .body-tab-menu .body-ratings-reviews .users-reviews .user-review .review .user-name small {
+        font-weight: 600;
+        color: gray; }
+      #body-tab-menu .body-tab-menu .body-ratings-reviews .users-reviews .user-review .review .users-rating .fa-star {
+        color: #ff3008;
+        font-size: 12px; }
+      #body-tab-menu .body-tab-menu .body-ratings-reviews .users-reviews .user-review .review .comment p {
+        font-size: 12px;
+        font-weight: 600;
+        color: gray;
+        line-height: 18px; }
+      #body-tab-menu .body-tab-menu .body-ratings-reviews .users-reviews .user-review .review .like button {
+        font-size: 13px;
+        color: #ff3008;
+        background-color: transparent;
+        border: 1px solid;
+        border-radius: 20px;
+        padding: 8px 13px;
+        font-weight: 600; }
+        #body-tab-menu .body-tab-menu .body-ratings-reviews .users-reviews .user-review .review .like button:focus {
+          outline: none; }
+      #body-tab-menu .body-tab-menu .body-ratings-reviews .users-reviews .user-review .review .like .imgs {
+        margin-left: 20px;
+        width: 38px; }
+        #body-tab-menu .body-tab-menu .body-ratings-reviews .users-reviews .user-review .review .like .imgs img {
+          width: 100%;
+          border: 1px solid white;
+          border-radius: 50%;
+          position: relative; }
+  #body-tab-menu .body-tab-menu .body-ratings-reviews .users-reviews .all-reviews {
+    margin-top: 20px;
+    border: none;
+    background-color: transparent;
+    color: #ff3008;
+    font-size: 13px;
+    font-weight: bold; }
+  #body-tab-menu .body-tab-menu .body-ratings-reviews .leave-comment span {
+    margin: 20px 0 0;
+    font-size: 12px;
+    font-weight: 600;
+    color: gray; }
+  #body-tab-menu .body-tab-menu .body-ratings-reviews .leave-comment .star {
+    margin-top: 8px; }
+    #body-tab-menu .body-tab-menu .body-ratings-reviews .leave-comment .star i {
+      color: #ff3008;
+      font-size: 22px; }
+  #body-tab-menu .body-tab-menu .body-ratings-reviews .leave-comment small {
+    font-size: 14px;
+    font-weight: 600; }
+  #body-tab-menu .body-tab-menu .body-ratings-reviews .leave-comment button {
+    margin-top: 20px;
+    background-color: #ff3008;
+    color: white;
+    border: none;
+    font-size: 14px;
+    padding: 4px 10px;
+    border: 2px; }
+  #body-tab-menu .offer {
+    padding: 25px;
+    margin-top: 30px;
+    background-color: white;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); }
+    #body-tab-menu .offer .img {
+      margin-right: 15px;
+      width: 28%; }
+      #body-tab-menu .offer .img img {
+        width: 100%; }
+    #body-tab-menu .offer h6 {
+      color: #ff3008;
+      font-weight: 600;
+      margin-bottom: 10px; }
+    #body-tab-menu .offer p {
+      font-size: 13px;
+      font-weight: 500;
+      color: gray;
+      margin-bottom: 0; }
+      #body-tab-menu .offer p span {
+        color: #ff3008;
+        font-weight: 700; }
+  #body-tab-menu .your-order {
+    margin-top: 30px;
+    border-radius: 2px;
+    background-color: #ff3008;
+    padding: 25px 20px; }
+    #body-tab-menu .your-order h5 {
+      color: white; }
+    #body-tab-menu .your-order h6 {
+      color: white;
+      font-size: 12px; }
+    #body-tab-menu .your-order .items {
+      margin: 30px 0 10px;
+      border-radius: 3px;
+      background-color: white; }
+      #body-tab-menu .your-order .items .item {
+        padding: 11px 0px 11px 15px;
+        position: relative;
+        border-top: 1px solid #d1d1d1; }
+        #body-tab-menu .your-order .items .item p {
+          margin: 0 0 0 23px;
+          font-size: 14px;
+          font-weight: 600; }
+        #body-tab-menu .your-order .items .item .fa-circle {
+          top: 15px;
+          position: absolute;
+          font-size: 7px;
+          border: 1px solid #ff3008;
+          padding: 3px;
+          color: #ff3008; }
+        #body-tab-menu .your-order .items .item button {
+          padding-right: 8px;
+          height: 30px;
+          background-color: transparent;
+          font-size: 14px;
+          margin-top: 1px;
+          border: 1px solid;
+          margin: -2px 10px 0 0;
+          transition: 0.1s; }
+        #body-tab-menu .your-order .items .item .count-item {
+          width: 110px; }
+          #body-tab-menu .your-order .items .item .count-item button {
+            border: 1px solid gray;
+            padding: 0;
+            width: 25px;
+            margin: -3px;
+            height: 28px; }
+          #body-tab-menu .your-order .items .item .count-item .count {
+            background-color: gray;
+            color: white; }
+          #body-tab-menu .your-order .items .item .count-item span {
+            width: 20px;
+            margin-left: 6px;
+            font-size: 14px;
+            font-weight: 600;
+            color: gray; }
+        #body-tab-menu .your-order .items .item button:hover {
+          color: white;
+          background-color: gray; }
+        #body-tab-menu .your-order .items .item [disabled]:hover {
+          background-color: transparent; }
+    #body-tab-menu .your-order .total {
+      padding: 10px;
+      background-color: white; }
+      #body-tab-menu .your-order .total .img {
+        width: 17%; }
+        #body-tab-menu .your-order .total .img img {
+          width: 100%; }
+      #body-tab-menu .your-order .total .total-price h5 {
+        font-size: 15px;
+        color: black;
+        font-weight: bold;
+        margin-bottom: 5px; }
+        #body-tab-menu .your-order .total .total-price h5 span {
+          color: #ff3008; }
+      #body-tab-menu .your-order .total .total-price p {
+        margin-top: 3px;
+        margin-bottom: 0;
+        font-size: 13px;
+        font-weight: 600; }
+    #body-tab-menu .your-order a {
+      background-color: #3ecf8e;
+      color: white;
+      font-weight: bold;
+      font-size: 17px;
+      margin-top: 10px;
+      width: 100%;
+      padding: 12px;
+      letter-spacing: 1px; }
 
 /*# sourceMappingURL=style.css.map */

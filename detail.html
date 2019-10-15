@@ -139,11 +139,11 @@
                 <div class="row">
                     <div class="col-lg-7">
                         <ul>
-                            <li class="ml-0" style="border-bottom-color:#3868fb">Online Sifariş</li>
-                            <li>Qalareya</li>
-                            <li>Haqqında</li>
-                            <li>Rezervasiya</li>
-                            <li>Reyting</li>
+                            <li tab-header="order" class="ml-0 active">Online Sifariş</li>
+                            <li tab-header="gallery">Qalareya</li>
+                            <li tab-header="info">Restotan haqqında</li>
+                            <li tab-header="book">Rezervasiya et</li>
+                            <li tab-header="reting">Reting</li>
                         </ul>
                     </div>
                     <div class="col-lg-5 text-right">
@@ -161,7 +161,7 @@
             <div class="wrapper">
                 <div class="row">
                     <div class="col-md-8 body-tab-menu ">
-                        <div class="body-order-online d-block">
+                        <div tab-body="order" class="body-order-online active">
                             <div class="recommended my-4 p-4">
                                 <h4>Recommended</h4>
                                 <div class="search my-3">
@@ -401,8 +401,331 @@
                                 </div>
                             </div>
                         </div>
+                        <div tab-body="gallery" class="body-gallery d-none">
+                            <div class="slider">
+                                <div class="img"><img src="img/slider.png" alt=""></div>
+                                <div class="img"><img src="img/slider.png" alt=""></div>
+                                <div class="img"><img src="img/slider.png" alt=""></div>
+                                <div class="img"><img src="img/slider.png" alt=""></div>
+                                <div class="img"><img src="img/slider.png" alt=""></div>
+                                <div class="img"><img src="img/slider.png" alt=""></div>
+                                <div class="img"><img src="img/slider.png" alt=""></div>
+                                <div class="img"><img src="img/slider.png" alt=""></div>
+                                <div class="img"><img src="img/slider.png" alt=""></div>
+                                <div class="img"><img src="img/slider.png" alt=""></div>
+                            </div>
+                        </div>
+                        <div tab-body="info" class="body-about-restaurant blog d-none">
+                            <div class="row info">
+                                <div class="col-lg-6 p-0">
+                                    <h5 class="mb-4">Restaurant Info</h5>
+                                    <p class="address">Jagjit Nagar, Near Railway Crossing,<br> Near Model Town,
+                                        Ludhiana, PUNJAB</p>
+                                    <p class="phone"><i class="fas fa-phone"></i>+91 01234-56789, +91 01234-56789</p>
+                                    <p class="email"><i class="fas fa-envelope"></i>ehmedovbehruz1995@mail.ru</p>
+                                    <p class="working-time"><i class="fas fa-clock"></i>Today 11am – 5pm, 6pm – 11pm
+                                        <span>OPEN NOW</span></p>
+                                </div>
+                                <div class="col-lg-6"></div>
+                            </div>
+                            <div class="row more">
+                                <div class="col-12 p-0">
+                                    <h5>More Info</h5>
+                                    <p>Dal Makhani, Panneer Butter Masala, Kadhai Paneer, Raita, Veg Thali, Laccha
+                                        Paratha, Butter Naan</p>
+                                    <button class="c-g"><i class="far fa-check-circle"></i> Səhər yeməyi</button>
+                                    <button class="c-g"><i class="far fa-check-circle"></i> Səhər yeməyi</button>
+                                    <button class="c-g"><i class="far fa-check-circle"></i> Səhər yeməyi</button>
+                                    <button class="c-g"><i class="far fa-check-circle"></i> Səhər yeməyi</button>
+                                    <button class="c-g"><i class="far fa-check-circle"></i> Səhər yeməyi</button>
+                                    <button class="c-g"><i class="far fa-check-circle"></i> Səhər yeməyi</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div tab-body="book" class="body-book-table blog d-none">
+                            <h5>Book A Table</h5>
+                            <form action="">
+                                <div class="row justify-content-end">
+                                    <div class="col-md-6">
+                                        <p>Full Name</p>
+                                        <input class="form-control" type="text" placeholder="Ad, soyad yazın">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Email Address</p>
+                                        <input class="form-control" type="text" placeholder="E-poçt yazın">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Mobil nömrə</p>
+                                        <input class="form-control" type="text" placeholder="Mobil nömrə yazın">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Rezerv tarixi</p>
+                                        <input class="form-control" type="text" placeholder="Rezerv tarixi">
+                                    </div>
+                                    <button type="submit">Göndər</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div tab-body="reting" class="body-ratings-reviews d-none"> 
+                            <div class="rate-place blog d-flex justify-content-between">
+                                <h4>Rate this Place</h4>
+                                <p>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </p>
+                            </div>
+                            <div class="ratings blog">
+                                <h4>Ratings and Reviews</h4>
+                                <div>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span class="font-weight-bold ml-3">335</span>
+                                    <p>Rated 3.5 out of 5</p>
+                                </div>
+                                <div class="stars">
+                                    <div class="star-cover">
+                                        <div class="star s5">
+                                            <span>5 Star</span>
+                                            <small>66</small>
+                                        </div>
+                                        <div class="star s4">
+                                            <span>4 Star</span>
+                                            <small>14</small>
+                                        </div>
+                                        <div class="star s3">
+                                            <span>3 Star</span>
+                                            <small>7</small>
+                                        </div>
+                                        <div class="star s2">
+                                            <span>2 Star</span>
+                                            <small>4</small>
+                                        </div>
+                                        <div class="star s1">
+                                            <span>1 Star</span>
+                                            <small>9</small>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button>Rate and Review</button>
+                                </div>
+                            </div>
+                            <div class="users-reviews blog">
+                                <h4>All Ratings and reviews</h4>
+                                <div class="user-review d-flex">
+                                    <div class="img">
+                                        <img src="img/slider.png" alt="">
+                                    </div>
+                                    <div class="review">
+                                        <div class="user-and-rating justify-content-between d-flex mb-3">
+                                            <div class="user-name">
+                                                <p>Əhmədov Bəhruz</p>
+                                                <small>Tue, 20 Mar 2020</small>
+                                            </div>
+                                            <div class="users-rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="comment">
+                                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                                                roots in a piece of classical Latin literature from 45 BC, making it
+                                                over 2000 years old. Richard McClintock, a Latin professor at
+                                                Hampden-Sydney College in Virginia, looked up one of the more obscure
+                                                Latin words, consectetur, from a Lorem Ipsum passage, and going through
+                                                the cites of the word in classical literature, discovered the
+                                                undoubtable source. Lorem Ipsum comes from sections </p>
+                                        </div>
+                                        <div class="like d-flex">
+                                            <div class="buttons">
+                                                <button><i class="fas fa-thumbs-up"></i> 263M</button>
+                                                <button><i class="fas fa-thumbs-down"></i> 263M</button>
+                                            </div>
+                                            <div class="imgs d-flex">
+                                                <img src="img/slider.png" alt="">
+                                                <img style="left: -15px" src="img/slider.png" alt="">
+                                                <img style="left: -30px" src="img/slider.png" alt="">
+                                                <img style="left: -45px" src="img/slider.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="user-review d-flex">
+                                    <div class="img">
+                                        <img src="img/slider.png" alt="">
+                                    </div>
+                                    <div class="review">
+                                        <div class="user-and-rating justify-content-between d-flex mb-3">
+                                            <div class="user-name">
+                                                <p>Əhmədov Bəhruz</p>
+                                                <small>Tue, 20 Mar 2020</small>
+                                            </div>
+                                            <div class="users-rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="comment">
+                                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                                                roots in a piece of classical Latin literature from 45 BC, making it
+                                                over 2000 years old. Richard McClintock, a Latin professor at
+                                                Hampden-Sydney College in Virginia, looked up one of the more obscure
+                                                Latin words, consectetur, from a Lorem Ipsum passage, and going through
+                                                the cites of the word in classical literature, discovered the
+                                                undoubtable source. Lorem Ipsum comes from sections </p>
+                                        </div>
+                                        <div class="like d-flex">
+                                            <div class="buttons">
+                                                <button><i class="fas fa-thumbs-up"></i> 263M</button>
+                                                <button><i class="fas fa-thumbs-down"></i> 263M</button>
+                                            </div>
+                                            <div class="imgs d-flex">
+                                                <img src="img/slider.png" alt="">
+                                                <img style="left: -15px" src="img/slider.png" alt="">
+                                                <img style="left: -30px" src="img/slider.png" alt="">
+                                                <img style="left: -45px" src="img/slider.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="user-review d-flex">
+                                    <div class="img">
+                                        <img src="img/slider.png" alt="">
+                                    </div>
+                                    <div class="review">
+                                        <div class="user-and-rating justify-content-between d-flex mb-3">
+                                            <div class="user-name">
+                                                <p>Əhmədov Bəhruz</p>
+                                                <small>Tue, 20 Mar 2020</small>
+                                            </div>
+                                            <div class="users-rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                        <div class="comment">
+                                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has
+                                                roots in a piece of classical Latin literature from 45 BC, making it
+                                                over 2000 years old. Richard McClintock, a Latin professor at
+                                                Hampden-Sydney College in Virginia, looked up one of the more obscure
+                                                Latin words, consectetur, from a Lorem Ipsum passage, and going through
+                                                the cites of the word in classical literature, discovered the
+                                                undoubtable source. Lorem Ipsum comes from sections </p>
+                                        </div>
+                                        <div class="like d-flex">
+                                            <div class="buttons">
+                                                <button><i class="fas fa-thumbs-up"></i> 263M</button>
+                                                <button><i class="fas fa-thumbs-down"></i> 263M</button>
+                                            </div>
+                                            <div class="imgs d-flex">
+                                                <img src="img/slider.png" alt="">
+                                                <img style="left: -15px" src="img/slider.png" alt="">
+                                                <img style="left: -30px" src="img/slider.png" alt="">
+                                                <img style="left: -45px" src="img/slider.png" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <button class="all-reviews">Bütün rəyləri gör</button>
+                                </div>
+                            </div>
+                            <div class="leave-comment blog">
+                                <h5>Leave Comment</h5>
+                                <span>Rate The Place</span>
+                                <p class="star">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </p>
+                                <small>Your comment</small>
+                                <textarea class="form-control" type="text" name="" ></textarea>
+                                <button>Göndər</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-4"></div>
+                    <div class="col-md-4 mb-5">
+                        <div class="offer d-flex">
+                            <div class="img">
+                                <img src="img/offer.png" alt="">
+                            </div>
+                            <div>
+                                <h6>OFFER</h6>
+                                <p>60% off on orders above $99 | Use coupon <span>OSAHAN50</span></p>
+                            </div>
+                        </div>
+                        <div class="your-order">
+                            <h5>Your Order</h4>
+                                <h6>6 ITEMS</h6>
+                                <div class="items">
+                                    <div class="item justify-content-between border-0 align-items-center d-flex">
+                                        <div>
+                                            <i class="fas fa-circle"></i>
+                                            <p>Chicken Tikka Sub</p>
+                                        </div>
+                                        <div class="count-item">
+                                            <button class="minus">-</button>
+                                            <button class="count">1</button>
+                                            <button class="plus">+</button>
+                                            <span>$555</span>
+                                        </div>
+                                    </div>
+                                    <div class="item justify-content-between align-items-center d-flex">
+                                        <div>
+                                            <i class="fas fa-circle"></i>
+                                            <p>Chicken Tikka Sub</p>
+                                        </div>
+                                        <div class="count-item">
+                                            <button class="minus">-</button>
+                                            <button class="count">1</button>
+                                            <button class="plus">+</button>
+                                            <span>$111</span>
+                                        </div>
+                                    </div>
+                                    <div class="item justify-content-between align-items-center d-flex">
+                                        <div>
+                                            <i class="fas fa-circle"></i>
+                                            <p>Chicken Tikka Sub</p>
+                                        </div>
+                                        <div class="count-item">
+                                            <button class="minus">-</button>
+                                            <button class="count">1</button>
+                                            <button class="plus">+</button>
+                                            <span>$111</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="total d-flex justify-content-between">
+                                    <div class="img">
+                                        <img src="img/wallet.png" alt="">
+                                    </div>
+                                    <div class="total-price text-right">
+                                        <h5>Subtotal: <span>$456.4</span></h5>
+                                        <small>Extra charges may apply</small>
+                                        <p>You have saved $ 955 on the bill</p>
+                                    </div>
+                                </div>
+                                <a class="btn" href="#">Checkout &#x2192;</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

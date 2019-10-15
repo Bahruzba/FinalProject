@@ -44,6 +44,9 @@
 }
 
 #header-tab-menu{
+    .active{
+        border-bottom-color:#3868fb;
+    }
     ul{
         padding-left: 0px;
         li{
@@ -109,7 +112,21 @@
 
 #body-tab-menu{
     background-color: #f3f7f8;
+    .blog{
+        background-color: white;
+        margin: 30px 0;
+        padding: 25px;
+        border-radius: 3px;
+        box-shadow: 0 .125rem .25rem rgba(0,0,0,.075); 
+    }
     .body-tab-menu{
+        [tab-body]{
+            opacity: 0;
+            transition: 0.3s;
+        }
+        .active{
+            opacity: 1;
+        }
         .body-order-online{
             margin: 30px;
             .header-items{
@@ -320,6 +337,417 @@
                 background-color: transparent;
             }
 
+
+        }
+        .body-gallery{
+            margin: 30px;
+            box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);        
+            .slider{
+                background-color: white;
+                padding: 15px;
+                border-radius: 3px;
+                .img{
+                    padding: 10px;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .body-about-restaurant{
+            .info{
+                margin: 0;
+                border-bottom: 1px solid rgb(218, 218, 218);
+                .address{
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: gray;
+                }
+                i{
+                    margin-right: 15px;
+                    font-size: 11px;
+                    color: $redcolor;
+                }
+                p{
+                    font-size: 13px;
+                    font-weight: 600;
+                    span{
+                        font-size: 9px;
+                        background-color: $greencolor;
+                        padding: 1px 3px;
+                        color: white;
+                        font-weight: bold;
+                        border-radius: 2px;
+                    }
+                }
+            }
+            .more{
+                margin: 25px 0;
+                h5{
+                    margin-bottom: 20px;
+                }
+                p{
+                    font-size: 12px;
+                    color: gray;
+                    font-weight: 600;
+                }
+                button{
+                    background-color: transparent;
+                    border: 1px solid rgb(219, 219, 219);
+                    font-weight: bold;
+                    font-size: 13px;
+                    padding: 5px 15px;
+                    margin: 5px;
+                }
+            }
+        }
+        .body-book-table{
+            h5{
+                margin-top: 15px;
+                font-weight: 600;
+            }
+            p{
+                margin: 15px 0 8px;
+                font-size: 13px;
+                font-weight: 600;
+            }
+            button{
+                background-color: $redcolor;
+                border: none;
+                color: white;
+                font-weight: 600;
+                padding: 7px 15px 8px;
+                border-radius: 2px;
+                margin-top: 15px;
+                margin-right: 16px;
+            }
+        }
+        .body-ratings-reviews{
+            .rate-place{
+                p{
+                    font-size: 24px;
+                    color: $redcolor;
+                    margin: 0;
+                    .fa-star{
+                        transition: 0.1s;
+                        &:hover{
+                            color: #3868fb;
+                        }
+                    }
+                }
+            }
+            .ratings{
+                h4{
+                    margin-bottom: 20px;
+                }
+                .fa-star{
+                    color: $redcolor;
+                    transition: 0.1s;
+                    &:hover{
+                        color: #3868fb;
+                    }
+
+                }
+                p{
+                    font-size: 12px;
+                    font-weight: 600;
+                    margin:  15px 0 35px 0;
+                }
+                .stars{
+                    .star-cover{
+                            position: relative;
+                            height: 240px;
+                        .star{
+                            position: relative;
+                            left: 50px;
+                            width: calc(100% - 100px);
+                            height: 30px;
+                            background-color: rgb(234, 241, 245);
+                            align-items: center;
+                            height: 30px;
+                            margin: 15px 0;
+                            span{
+                                position: absolute;
+                                top: 6px;
+                                left: -50px;
+                            }
+                            small{
+                                position: absolute;
+                                top: 6px;
+                                right: -50px;
+                            }
+                            .blue{
+                                width: 200px;
+                                height: 30px;
+                                background-color: #3868fb;
+                            }
+                        }
+                    }
+                    span{
+                        font-size: 12px;
+                        font-weight: 600;
+                    }
+                }
+                button{
+                    background-color: transparent;
+                    font-size: 15px;
+                    color: $redcolor;
+                    border: 1px solid $redcolor;
+                    text-align: center;
+                    padding: 5px 10px;
+                    border-radius: 2px;
+                    transition: 0.2s;
+                    &:hover{
+                        background-color: $redcolor;
+                        color: white;
+                    }
+                }
+            }
+            .users-reviews{
+                .user-review{
+                    padding: 30px 0;
+                    border-bottom: 1px solid rgb(197, 197, 197);
+                    .img{
+                        width: 9%;
+                        margin-right: 20px;
+                        img{
+                            width: 100%;
+                            border-radius: 50%;
+                        }
+                    }
+                    .review{
+                        width: 90%;
+                        .user-name{
+                            p{
+                            font-weight: 600;
+                            margin-bottom: 0;
+                            }
+                            small{
+                                font-weight: 600;
+                                color: gray;
+                            }
+
+                        }
+                        .users-rating{
+                            .fa-star{
+                                color: $redcolor;
+                                font-size: 12px;
+                            }
+                        }
+                        .comment{
+                            p{
+                                font-size: 12px;
+                                font-weight: 600;
+                                color: gray;
+                                line-height: 18px;
+                            }
+                        }
+                        .like{
+                            button{
+                                font-size: 13px;
+                                color: $redcolor;
+                                background-color: transparent;
+                                border:  1px solid;
+                                border-radius: 20px;
+                                padding: 8px 13px;
+                                font-weight: 600;
+                                &:focus{
+                                    outline: none;
+                                }
+                            }
+                            .imgs{
+                                margin-left: 20px;
+                                img{
+                                    width: 100%;
+                                    border: 1px solid white;
+                                    border-radius: 50%;
+                                    position: relative;
+                                }
+                                width: 38px;
+                            }
+                        }
+                    }
+                }
+                .all-reviews{
+                    margin-top: 20px;
+                    border: none;
+                    background-color: transparent;
+                    color: $redcolor;
+                    font-size: 13px;
+                    font-weight: bold;
+                }
+            }
+            .leave-comment{
+                span{
+                    margin: 20px 0 0;
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: gray;
+                }
+                .star{
+                    margin-top: 8px;
+                    i{
+                        color: $redcolor;
+                        font-size: 22px;
+                    }
+                }
+                small{
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+                button{
+                    margin-top: 20px;
+                    background-color: $redcolor;
+                    color: white;
+                    border:none;
+                    font-size: 14px;
+                    padding: 4px 10px;
+                    border: 2px;
+                }
+            }
+        }
+    }
+    
+    .offer{
+        padding:  25px;
+        margin-top: 30px;
+        background-color: white;
+        box-shadow: 0 .125rem .25rem rgba(0,0,0,.075); 
+        .img{
+            margin-right: 15px;
+            width: 28%;
+            img{
+                width: 100%;
+            }
+        }       
+        h6{
+            color: $redcolor;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        p{
+
+            font-size: 13px;
+            font-weight: 500;
+            color: gray;
+            margin-bottom: 0;
+            span{
+                color: $redcolor;
+                font-weight: 700;
+            }
+        }
+    }
+    .your-order{
+        margin-top: 30px;
+        border-radius: 2px;
+        background-color: $redcolor;
+        padding: 25px 20px;
+        h5{
+            color:white;    
+        }
+        h6{
+            color:white;
+            font-size: 12px;
+        }
+        .items{
+            margin: 30px 0 10px;
+            border-radius: 3px;
+            background-color: white;
+            .item{
+                padding: 11px 0px 11px 15px;
+                position: relative;
+                border-top: 1px solid rgb(209, 209, 209);
+                p{
+                    margin: 0 0 0 23px;
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+                .fa-circle{
+                    top: 15px;
+                    position: absolute;
+                    font-size: 7px;
+                    border: 1px solid $redcolor;
+                    padding: 3px;
+                    color: $redcolor;
+                }
+                button{
+                    padding-right: 8px;
+                    height: 30px;
+                    background-color: transparent;
+                    font-size: 14px;
+                    margin-top: 1px;
+                    border: 1px solid;
+                    margin: -2px 10px 0 0;
+                    transition: 0.1s;
+                }
+                .count-item{
+                    width: 110px;
+                    button{
+                        border: 1px solid gray;
+                        padding: 0;
+                        width: 25px;
+                        margin: -3px;
+                        height: 28px;
+                    }
+                    .count{
+                        background-color: gray;
+                        color: white;
+                    }
+                    span{
+                        width: 20px;
+                        margin-left: 6px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        color: gray;
+                    }
+                }
+                button:hover{
+                    color: white;
+                    background-color: gray;
+                }
+                [disabled]:hover{
+                    background-color: transparent;
+                }
+    
+
+            }
+        }
+        .total{
+            padding: 10px;
+            background-color: white;
+            .img{
+                width: 17%;
+                img{
+                    width: 100%;
+                }
+            }
+            .total-price{
+                h5{
+                    font-size: 15px;
+                    color: black;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                    span{
+                        color: $redcolor;
+                    }
+                }
+                p{
+                    margin-top: 3px;
+                    margin-bottom: 0;
+                    font-size: 13px;
+                    font-weight: 600;
+                }
+            }
+        }
+        a{
+            background-color: $greencolor;
+            color: white;
+            font-weight: bold;
+            font-size: 17px;
+            margin-top: 10px;
+            width: 100%;
+            padding: 12px;
+            letter-spacing: 1px;
         }
     }
 }
