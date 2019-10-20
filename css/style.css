@@ -46,7 +46,9 @@ section {
   background-color: rgba(0, 0, 0, 0.7); }
 
 #header {
-  padding: 10px 0; }
+  background-color: white;
+  padding: 10px 0;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); }
   #header .bg-light {
     background-color: white !important; }
   #header .img {
@@ -225,6 +227,7 @@ section {
       padding: 3px 3px 1.5px 4px; }
 
 footer .work-with-us {
+  background-color: white;
   margin: 0;
   padding: 60px 0;
   font-size: 20px;
@@ -771,7 +774,12 @@ footer #end-footer {
       #body-tab-menu .body-tab-menu .body-order-online .items .item {
         position: relative;
         padding: 20px;
-        border: 1px solid #c5c5c5; }
+        border: 1px solid #e0e0e0;
+        box-shadow: 0 0.125rem 0.25rem rgba(189, 189, 189, 0.075); }
+        #body-tab-menu .body-tab-menu .body-order-online .items .item:first-child {
+          border-radius: 2px 2px 0 0; }
+        #body-tab-menu .body-tab-menu .body-order-online .items .item:last-child {
+          border-radius: 0 0 2px 2px; }
       #body-tab-menu .body-tab-menu .body-order-online .items img {
         width: 40px;
         border-radius: 50%;
@@ -1051,15 +1059,18 @@ footer #end-footer {
       border-radius: 3px;
       background-color: white; }
       #body-tab-menu .your-order .items .item {
+        height: 50px;
         padding: 11px 0px 11px 15px;
         position: relative;
-        border-top: 1px solid #d1d1d1; }
+        border-bottom: 1px solid #d1d1d1; }
+        #body-tab-menu .your-order .items .item:last-child {
+          border: none; }
         #body-tab-menu .your-order .items .item p {
           margin: 0 0 0 23px;
           font-size: 14px;
           font-weight: 600; }
         #body-tab-menu .your-order .items .item .fa-circle {
-          top: 15px;
+          top: 18px;
           position: absolute;
           font-size: 7px;
           border: 1px solid #ff3008;
@@ -1070,9 +1081,8 @@ footer #end-footer {
           height: 30px;
           background-color: transparent;
           font-size: 14px;
-          margin-top: 1px;
           border: 1px solid;
-          margin: -2px 10px 0 0;
+          margin-right: 10px;
           transition: 0.1s; }
         #body-tab-menu .your-order .items .item .count-item {
           width: 110px; }
@@ -1124,5 +1134,427 @@ footer #end-footer {
       width: 100%;
       padding: 12px;
       letter-spacing: 1px; }
+
+body {
+  background-color: #f3f7f8; }
+
+.you-may-also-like {
+  background-color: white;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); }
+  .you-may-also-like h6 {
+    font-size: 14px; }
+  .you-may-also-like .item {
+    padding-bottom: 5px;
+    border: 1px solid #dfdfdf; }
+    .you-may-also-like .item .img img {
+      width: 100%; }
+    .you-may-also-like .item .img button {
+      background-color: #ff3008;
+      color: white;
+      border: none;
+      font-size: 14px;
+      position: absolute;
+      top: 20px; }
+    .you-may-also-like .item h6 {
+      margin-top: 5px;
+      margin-bottom: 0px;
+      font-size: 14px; }
+    .you-may-also-like .item span {
+      color: #ff3008;
+      padding: 1px 5px;
+      font-size: 10px;
+      font-weight: 500;
+      background-color: #e9e9e9;
+      border-radius: 3px;
+      transition: 0.05s; }
+      .you-may-also-like .item span:hover {
+        background-color: #ff3008;
+        color: white; }
+    .you-may-also-like .item:hover span {
+      background-color: #ff3008;
+      color: white; }
+
+.choose-address {
+  background-color: white;
+  margin-top: 40px;
+  padding: 20px 20px 0;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); }
+  .choose-address h4 {
+    margin-bottom: 5px; }
+  .choose-address small {
+    font-size: 16px;
+    font-weight: 600;
+    color: gray; }
+  .choose-address .icon i {
+    font-size: 40px; }
+  .choose-address .item {
+    padding: 15px;
+    border: 1px solid #dddddd; }
+    .choose-address .item .info-address p {
+      height: 39px;
+      font-size: 13px;
+      font-weight: 600; }
+    .choose-address .item .info-address button {
+      background-color: gray;
+      color: white;
+      border-radius: 2px;
+      border: none;
+      padding: 2px 30px 4px; }
+    .choose-address .item .info-address span {
+      font-size: 13px;
+      font-weight: bold;
+      margin: 4px 0 0 15px; }
+  .choose-address .selected {
+    border-color: #3ecf8e; }
+    .choose-address .selected button {
+      background-color: #3ecf8e !important; }
+
+.choose-payment {
+  background-color: white;
+  margin: 40px 0;
+  padding: 25px;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); }
+  .choose-payment .header-tab h4 {
+    margin-bottom: 5px; }
+  .choose-payment .header-tab small {
+    font-size: 16px;
+    font-weight: 600;
+    color: gray; }
+  .choose-payment .header-tab ul {
+    padding: 0; }
+    .choose-payment .header-tab ul li {
+      list-style-type: none;
+      padding: 25px 20px;
+      font-size: 10px;
+      cursor: pointer; }
+      .choose-payment .header-tab ul li i {
+        font-size: 12px;
+        padding: 8px;
+        color: white;
+        background-color: #424242;
+        border-radius: 50%;
+        margin-right: 10px; }
+      .choose-payment .header-tab ul li small {
+        font-size: 12px;
+        color: black; }
+  .choose-payment .body-tab {
+    background-color: #f3f7f8;
+    padding: 28px 20px; }
+    .choose-payment .body-tab [body-tab=debit] .item, .choose-payment .body-tab [body-tab=food] .item {
+      padding: 10px 0; }
+      .choose-payment .body-tab [body-tab=debit] .item p, .choose-payment .body-tab [body-tab=food] .item p {
+        margin-bottom: 5px;
+        font-size: 14px;
+        font-weight: 600; }
+      .choose-payment .body-tab [body-tab=debit] .item i, .choose-payment .body-tab [body-tab=food] .item i {
+        font-size: 28px;
+        margin: 4px;
+        color: #636363; }
+    .choose-payment .body-tab [body-tab=debit] .cart-number div, .choose-payment .body-tab [body-tab=food] .cart-number div {
+      position: relative; }
+      .choose-payment .body-tab [body-tab=debit] .cart-number div input, .choose-payment .body-tab [body-tab=food] .cart-number div input {
+        background-color: white; }
+      .choose-payment .body-tab [body-tab=debit] .cart-number div i, .choose-payment .body-tab [body-tab=food] .cart-number div i {
+        position: absolute;
+        top: -4px;
+        right: -4px;
+        padding: 12px;
+        font-size: 12px;
+        background-color: #f3f7f8;
+        border: 1px solid gray;
+        border-radius: 0 3px 3px 0; }
+    .choose-payment .body-tab [body-tab=debit] .fa-check, .choose-payment .body-tab [body-tab=food] .fa-check {
+      color: #f3f7f8;
+      border: 1px solid gray;
+      border-radius: 3px;
+      font-size: 12px;
+      padding: 1px; }
+    .choose-payment .body-tab [body-tab=debit] .saved, .choose-payment .body-tab [body-tab=food] .saved {
+      background-color: #0056b3; }
+    .choose-payment .body-tab [body-tab=debit] a, .choose-payment .body-tab [body-tab=food] a {
+      background-color: #3ecf8e;
+      width: 100%;
+      color: white;
+      font-weight: 600; }
+    .choose-payment .body-tab [body-tab=credit] .item {
+      margin-bottom: 15px;
+      background-color: white;
+      padding: 20px;
+      border: 1px solid #e2e2e2; }
+      .choose-payment .body-tab [body-tab=credit] .item i {
+        border-radius: 50px; }
+      .choose-payment .body-tab [body-tab=credit] .item p {
+        font-size: 13px;
+        font-weight: 600;
+        color: gray; }
+      .choose-payment .body-tab [body-tab=credit] .item a {
+        color: #ff3008;
+        font-weight: bold;
+        font-size: 14px; }
+        .choose-payment .body-tab [body-tab=credit] .item a:hover {
+          text-decoration: none;
+          color: #0056b3; }
+    .choose-payment .body-tab [body-tab=netbanking] p {
+      display: inline-flex;
+      border: 1px solid #ff3008;
+      border-radius: 3px;
+      color: #ff3008; }
+      .choose-payment .body-tab [body-tab=netbanking] p span {
+        display: inline-block;
+        padding: 6px 10px;
+        border-right: 1px solid #ff3008;
+        font-size: 12px;
+        font-weight: 600;
+        margin: 0;
+        cursor: pointer; }
+        .choose-payment .body-tab [body-tab=netbanking] p span:hover {
+          background-color: #ff3008;
+          color: white; }
+        .choose-payment .body-tab [body-tab=netbanking] p span:last-child {
+          border-right: none; }
+    .choose-payment .body-tab [body-tab=netbanking] a {
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+      width: 100%;
+      padding: 20px;
+      margin-top: 20px; }
+    .choose-payment .body-tab [body-tab=delivery] span {
+      font-size: 12px;
+      font-weight: 600;
+      color: gray; }
+    .choose-payment .body-tab [body-tab=delivery] hr {
+      margin: 20px 0; }
+    .choose-payment .body-tab [body-tab=delivery] a {
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+      width: 100%;
+      padding: 20px;
+      background-color: #3ecf8e; }
+
+.your-order {
+  border-radius: 2px;
+  background-color: #ff3008;
+  padding: 25px 20px; }
+  .your-order .header-orders {
+    display: flex;
+    color: white; }
+    .your-order .header-orders img {
+      width: 100%;
+      border-radius: 50%;
+      border: 3px solid white; }
+    .your-order .header-orders span {
+      font-size: 10px;
+      font-weight: 600; }
+  .your-order .items {
+    margin: 30px 0 10px;
+    border-radius: 3px;
+    background-color: white; }
+    .your-order .items .item {
+      height: 50px;
+      padding: 11px 0px 11px 15px;
+      position: relative;
+      border-bottom: 1px solid #d1d1d1; }
+      .your-order .items .item:last-child {
+        border: none; }
+      .your-order .items .item p {
+        margin: 0 0 0 23px;
+        font-size: 14px;
+        font-weight: 600; }
+      .your-order .items .item .fa-circle {
+        top: 18px;
+        position: absolute;
+        font-size: 7px;
+        border: 1px solid #ff3008;
+        padding: 3px;
+        color: #ff3008; }
+      .your-order .items .item button {
+        padding-right: 8px;
+        height: 30px;
+        background-color: transparent;
+        font-size: 14px;
+        border: 1px solid;
+        margin-right: 10px;
+        transition: 0.1s; }
+      .your-order .items .item .count-item {
+        width: 110px; }
+        .your-order .items .item .count-item button {
+          border: 1px solid gray;
+          padding: 0;
+          width: 25px;
+          margin: -3px;
+          height: 28px; }
+        .your-order .items .item .count-item .count {
+          background-color: gray;
+          color: white; }
+        .your-order .items .item .count-item span {
+          width: 20px;
+          margin-left: 6px;
+          font-size: 14px;
+          font-weight: 600;
+          color: gray; }
+      .your-order .items .item button:hover {
+        color: white;
+        background-color: gray; }
+      .your-order .items .item [disabled]:hover {
+        background-color: transparent; }
+  .your-order .promocode-suggestions {
+    background-color: white;
+    padding: 10px; }
+    .your-order .promocode-suggestions .promocode {
+      width: 100%;
+      display: inline-block; }
+      .your-order .promocode-suggestions .promocode input {
+        width: 73%;
+        border: 1px solid #c5c5c5;
+        padding: 5px 10px; }
+      .your-order .promocode-suggestions .promocode button {
+        position: absolute;
+        width: 85px;
+        border: none;
+        background-color: #ff3008;
+        color: white;
+        padding: 6px 10px;
+        right: 45px;
+        display: inline-flex;
+        align-items: center; }
+        .your-order .promocode-suggestions .promocode button i {
+          margin-top: 2px;
+          margin-right: 5px;
+          font-size: 7px;
+          color: #ff3008;
+          background-color: white;
+          padding: 3px 4px 3px 3px;
+          border-radius: 50%;
+          font-weight: bold; }
+    .your-order .promocode-suggestions .suggestion {
+      margin-top: 10px;
+      border: 1px solid #dfdfdf; }
+      .your-order .promocode-suggestions .suggestion .icon {
+        width: 15%;
+        background-color: #ececec;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid #dfdfdf; }
+        .your-order .promocode-suggestions .suggestion .icon i {
+          color: #474747; }
+      .your-order .promocode-suggestions .suggestion textarea {
+        width: 85%;
+        border: none;
+        padding: 5px 10px; }
+  .your-order .total-priece {
+    background-color: white;
+    padding: 10px;
+    margin-top: 10px; }
+    .your-order .total-priece p {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px; }
+      .your-order .total-priece p span {
+        font-size: 13px;
+        font-weight: 600;
+        color: gray; }
+      .your-order .total-priece p small {
+        font-size: 13px;
+        font-weight: bold;
+        color: dimgray; }
+    .your-order .total-priece .discount span, .your-order .total-priece .discount small {
+      color: #3ecf8e; }
+    .your-order .total-priece .total {
+      margin-top: 15px;
+      padding-top: 16px;
+      border-top: 1px solid #dddddd; }
+      .your-order .total-priece .total span {
+        font-weight: bold;
+        font-size: 16px;
+        color: black; }
+      .your-order .total-priece .total small {
+        font-weight: bold;
+        font-size: 16px;
+        color: black;
+        letter-spacing: 0.5px; }
+  .your-order a {
+    background-color: #3ecf8e;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    margin-top: 10px;
+    width: 100%;
+    padding: 12px;
+    letter-spacing: 1px; }
+    .your-order a:hover {
+      color: white; }
+
+#add-address {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  z-index: -1;
+  opacity: 0; }
+  #add-address .center {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background-color: white;
+    padding: 10px; }
+    #add-address .center .fa-times {
+      position: absolute;
+      right: 15px;
+      font-weight: bolder;
+      font-size: 22px;
+      cursor: pointer;
+      color: #4d4d4d; }
+    #add-address .center .item {
+      position: relative;
+      margin: 20px 0;
+      border-radius: 3px; }
+      #add-address .center .item h6 {
+        font-size: 14px; }
+      #add-address .center .item input {
+        font-size: 12px; }
+      #add-address .center .item i {
+        position: absolute;
+        right: 0px;
+        top: 24.5px;
+        border: 1px solid gray;
+        border-radius: 0 3px 3px 0;
+        padding: 7px;
+        transition: 0.2s; }
+        #add-address .center .item i:hover {
+          background-color: #5c5c5c;
+          color: white; }
+      #add-address .center .item button {
+        border: none;
+        background-color: #17a2b8;
+        color: white;
+        width: 33%;
+        padding: 8px; }
+      #add-address .center .item .selected {
+        background-color: #117a8b; }
+    #add-address .center .cancel {
+      width: 49%;
+      border: 1px solid #ff3008;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      color: red; }
+      #add-address .center .cancel:hover {
+        background-color: #ff3008;
+        color: white; }
+    #add-address .center .submit {
+      width: 49%;
+      border: 1px solid #ff3008;
+      text-align: center;
+      padding: 10px;
+      color: white;
+      background-color: #ff3008;
+      font-size: 14px; }
 
 /*# sourceMappingURL=style.css.map */

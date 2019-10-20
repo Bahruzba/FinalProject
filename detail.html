@@ -255,7 +255,7 @@
                                                     <button class="add text-right">ADD</button>
                                                     <div class="count-item d-none">
                                                         <button class="minus">-</button>
-                                                        <button class="count">1</button>
+                                                        <button max="5" class="count">1</button>
                                                         <button class="plus">+</button>
                                                     </div>
                                                 </div>
@@ -278,7 +278,7 @@
                                                     <button class="add text-right">ADD</button>
                                                     <div class="count-item d-none">
                                                         <button class="minus">-</button>
-                                                        <button class="count">1</button>
+                                                        <button max="5" class="count">1</button>
                                                         <button class="plus">+</button>
                                                     </div>
                                                 </div>
@@ -301,7 +301,7 @@
                                                     <button class="add text-right">ADD</button>
                                                     <div class="count-item d-none">
                                                         <button class="minus">-</button>
-                                                        <button class="count">1</button>
+                                                        <button max="5" class="count">1</button>
                                                         <button class="plus">+</button>
                                                     </div>
                                                 </div>
@@ -312,8 +312,7 @@
                             </div>
                             <h4 class="header-items">Quick Bites <small>3 ITEMS</small></h4>
                             <div class="items">
-                                <div style="border-bottom: 0px"
-                                    class="item justify-content-between align-items-center d-flex">
+                                <div class="item justify-content-between align-items-center d-flex">
                                     <div>
                                         <i class="fas fa-circle"></i>
                                         <p>Chicken Tikka Sub <span>BESTSELLER</span></p>
@@ -322,7 +321,7 @@
                                     <button class="add">ADD</button>
                                     <div class="count-item d-none">
                                         <button class="minus">-</button>
-                                        <button class="count">1</button>
+                                        <button max="5" class="count">1</button>
                                         <button class="plus">+</button>
                                     </div>
                                 </div>
@@ -335,15 +334,14 @@
                                     <button class="add">ADD</button>
                                     <div class="count-item d-none">
                                         <button class="minus">-</button>
-                                        <button class="count">1</button>
+                                        <button max="5" class="count">1</button>
                                         <button class="plus">+</button>
                                     </div>
                                 </div>
                             </div>
                             <h4 class="header-items">Startes <small>3 ITEMS</small></h4>
                             <div class="items">
-                                <div style="border-bottom: 0px"
-                                    class="item justify-content-between align-items-center d-flex">
+                                <div class="item justify-content-between align-items-center d-flex">
                                     <div class="ml-4">
                                         <img src="img/slider.png" alt="">
                                         <p c>Chicken Tikka Sub <span>BESTSELLER</span></p>
@@ -352,7 +350,7 @@
                                     <button class="add">ADD</button>
                                     <div class="count-item d-none">
                                         <button class="minus">-</button>
-                                        <button class="count">1</button>
+                                        <button max="5" class="count">1</button>
                                         <button class="plus">+</button>
                                     </div>
                                 </div>
@@ -365,15 +363,14 @@
                                     <button class="add">ADD</button>
                                     <div class="count-item d-none">
                                         <button class="minus">-</button>
-                                        <button class="count">1</button>
+                                        <button max="5" class="count">1</button>
                                         <button class="plus">+</button>
                                     </div>
                                 </div>
                             </div>
                             <h4 class="header-items">Soups <small>3 ITEMS</small></h4>
                             <div class="items">
-                                <div style="border-bottom: 0px"
-                                    class="item justify-content-between align-items-center d-flex">
+                                <div class="item justify-content-between align-items-center d-flex">
                                     <div>
                                         <i class="fas fa-circle"></i>
                                         <p>Chicken Tikka Sub <span>BESTSELLER</span></p>
@@ -382,7 +379,7 @@
                                     <button class="add">ADD</button>
                                     <div class="count-item d-none">
                                         <button class="minus">-</button>
-                                        <button class="count">1</button>
+                                        <button max="5" class="count">1</button>
                                         <button class="plus">+</button>
                                     </div>
                                 </div>
@@ -395,7 +392,7 @@
                                     <button class="add">ADD</button>
                                     <div class="count-item d-none">
                                         <button class="minus">-</button>
-                                        <button class="count">1</button>
+                                        <button max="5" class="count">1</button>
                                         <button class="plus">+</button>
                                     </div>
                                 </div>
@@ -466,7 +463,7 @@
                                 </div>
                             </form>
                         </div>
-                        <div tab-body="reting" class="body-ratings-reviews d-none"> 
+                        <div tab-body="reting" class="body-ratings-reviews d-none">
                             <div class="rate-place blog d-flex justify-content-between">
                                 <h4>Rate this Place</h4>
                                 <p>
@@ -657,7 +654,7 @@
                                     <i class="fas fa-star"></i>
                                 </p>
                                 <small>Your comment</small>
-                                <textarea class="form-control" type="text" name="" ></textarea>
+                                <textarea class="form-control" type="text" name=""></textarea>
                                 <button>Göndər</button>
                             </div>
                         </div>
@@ -676,14 +673,15 @@
                             <h5>Your Order</h4>
                                 <h6>6 ITEMS</h6>
                                 <div class="items">
-                                    <div class="item justify-content-between border-0 align-items-center d-flex">
+                                    <div class="item justify-content-between align-items-center d-flex">
                                         <div>
                                             <i class="fas fa-circle"></i>
                                             <p>Chicken Tikka Sub</p>
                                         </div>
-                                        <div class="count-item">
-                                            <button class="minus">-</button>
-                                            <button class="count">1</button>
+                                        <button class="add text-right">ADD</button>
+                                        <div class="count-item d-none">
+                                            <button class="minus">&minus;</button>
+                                            <button max="5" class="count">1</button>
                                             <button class="plus">+</button>
                                             <span>$555</span>
                                         </div>
@@ -693,11 +691,12 @@
                                             <i class="fas fa-circle"></i>
                                             <p>Chicken Tikka Sub</p>
                                         </div>
-                                        <div class="count-item">
-                                            <button class="minus">-</button>
-                                            <button class="count">1</button>
+                                        <button class="add text-right">ADD</button>
+                                        <div class="count-item d-none">
+                                            <button class="minus">&minus;</button>
+                                            <button max="5" class="count">1</button>
                                             <button class="plus">+</button>
-                                            <span>$111</span>
+                                            <span>$555</span>
                                         </div>
                                     </div>
                                     <div class="item justify-content-between align-items-center d-flex">
@@ -705,13 +704,15 @@
                                             <i class="fas fa-circle"></i>
                                             <p>Chicken Tikka Sub</p>
                                         </div>
-                                        <div class="count-item">
-                                            <button class="minus">-</button>
-                                            <button class="count">1</button>
+                                        <button class="add text-right">ADD</button>
+                                        <div class="count-item d-none">
+                                            <button class="minus">&minus;</button>
+                                            <button max="5" class="count">1</button>
                                             <button class="plus">+</button>
-                                            <span>$111</span>
+                                            <span>$555</span>
                                         </div>
                                     </div>
+
                                 </div>
                                 <div class="total d-flex justify-content-between">
                                     <div class="img">

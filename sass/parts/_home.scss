@@ -54,7 +54,10 @@ section{
 }
 
 #header {
+    background-color: white;
     padding: 10px 0;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075); 
+
     .bg-light{
         background-color: white!important;
     }
@@ -328,6 +331,7 @@ section{
 
 footer{
     .work-with-us{
+        background-color: white;
         margin: 0;
         padding: 60px 0;
         font-size: 20px;

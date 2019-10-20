@@ -1,6 +1,6 @@
 $('.owl-carousel').slick({
     infinite: true,
-    slidesToShow: 6,
+    slidesToShow: 5,
     slidesToScroll: 1,
     prevArrow: false,
     nextArrow: false,
@@ -111,23 +111,23 @@ $(document).on("click", "#offers .item .body-tab-menu i", function(){
 })
 
 //show count item
-$(document).on("click", "#body-tab-menu .add", function(){
+$(document).on("click", ".add", function(){
     $(this).addClass("d-none").next().removeClass("d-none");
 });
 
 //plus item count
-$(document).on("click", "#body-tab-menu .count-item .plus", function(){
+$(document).on("click", ".count-item .plus", function(){
     var count = Number($(this).prev().text());
+    var max = Number($(this).prev().attr("max"));
     $(this).prev().text(count+1);
-    if(count>18)
+    if(count>max-2||count>18)
     {
-        console.log("sss");
         $(this).attr("disabled","");
     }
 })
 
 //minus item count
-$(document).on("click", "#body-tab-menu .count-item .minus", function(){
+$(document).on("click", ".count-item .minus", function(){
     var count = Number($(this).next().text());
     
     if(count>1){
@@ -137,6 +137,40 @@ $(document).on("click", "#body-tab-menu .count-item .minus", function(){
         $(this).parent().prev().removeClass("d-none");
     }
 })
+
+//choose addres delivery
+$(".choose-address button").click(function(){
+    $(".choose-address .item").removeClass("selected");
+    $(this).parents(".item").addClass("selected");
+})
+
+//choose address name for new address delivery
+$("#add-address .item button").click(function(){
+    $("#add-address .item button").removeClass('selected');
+    $(this).addClass("selected");
+
+}) 
+
+//toggle New address modal
+function CloseAddAddress(){
+    $("#add-address").animate({
+        opacity:0,zIndex:-1
+    })
+}
+$("#add-address .cancel").click(function(){
+    CloseAddAddress();
+})
+$("#add-address .fa-times").click(function(){
+    CloseAddAddress();
+})
+
+//open add address modal
+$(".choose-address .new-address").click(function(){
+    $("#add-address").css("z-index","1").animate({
+        opacity: 1
+    })
+})
+
 
 //rating grafic
 function Start(){
@@ -163,5 +197,19 @@ $(document).on("click", "#header-tab-menu [tab-header]", function(){
     },300);
 })
 
+//save cards
+$(".choose-payment .fa-check").click(function(){
+    $(this).toggleClass("saved");
+})
+
+$(".choose-payment .header-tab li").click(function(){
+    $(".choose-payment .header-tab li").css("background-color","white");
+    $(this).css("background-color","#f3f7f8");
+    var tab=$(this).attr("tab-header");
+    $(".choose-payment .body-tab [body-tab]").addClass("d-none");
+    $(".choose-payment .body-tab [body-tab="+tab+"]").removeClass("d-none");
+
+
+})
 
 });

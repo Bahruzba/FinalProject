@@ -266,11 +266,18 @@
             }
             .items{
                 background-color: white;
-                box-shadow: 0 .125rem .25rem rgba(189, 189, 189, 0.075);   
+                box-shadow: 0 .125rem .25rem rgba(189, 189, 189, 0.075);
                 .item{
                     position: relative;
                     padding: 20px;
-                    border:  1px solid rgb(197, 197, 197);
+                    border:  1px solid rgb(224, 224, 224);
+                    box-shadow: 0 .125rem .25rem rgba(189, 189, 189, 0.075);   
+                    &:first-child{
+                        border-radius: 2px 2px 0 0; 
+                    }
+                    &:last-child{
+                        border-radius: 0 0 2px 2px; 
+                    }
                 }           
                 img{
                     width: 40px;
@@ -336,8 +343,6 @@
             [disabled]:hover{
                 background-color: transparent;
             }
-
-
         }
         .body-gallery{
             margin: 30px;
@@ -654,16 +659,20 @@
             border-radius: 3px;
             background-color: white;
             .item{
+                height: 50px;
                 padding: 11px 0px 11px 15px;
                 position: relative;
-                border-top: 1px solid rgb(209, 209, 209);
+                border-bottom: 1px solid rgb(209, 209, 209);
+                &:last-child{
+                    border: none;
+                }
                 p{
                     margin: 0 0 0 23px;
                     font-size: 14px;
                     font-weight: 600;
                 }
                 .fa-circle{
-                    top: 15px;
+                    top: 18px;
                     position: absolute;
                     font-size: 7px;
                     border: 1px solid $redcolor;
@@ -675,9 +684,8 @@
                     height: 30px;
                     background-color: transparent;
                     font-size: 14px;
-                    margin-top: 1px;
                     border: 1px solid;
-                    margin: -2px 10px 0 0;
+                    margin-right:10px;
                     transition: 0.1s;
                 }
                 .count-item{
@@ -689,6 +697,7 @@
                         margin: -3px;
                         height: 28px;
                     }
+                    
                     .count{
                         background-color: gray;
                         color: white;

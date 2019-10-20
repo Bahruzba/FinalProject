@@ -1,0 +1,549 @@
+body{
+    background-color: #f3f7f8;
+}
+
+.you-may-also-like{
+    background-color: white;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);    
+    h6{
+        font-size: 14px;
+    }
+    .item{
+        padding-bottom: 5px;
+        border:  1px solid rgb(223, 223, 223);
+        .img{
+            img{
+                width: 100%;
+            }
+            button{
+                background-color: $redcolor;
+                color: white;
+                border: none;
+                font-size: 14px;
+                position: absolute;
+                top: 20px;
+            }
+        }
+        h6{
+            margin-top: 5px;
+            margin-bottom: 0px;
+            font-size: 14px;
+        }
+        span{
+            color: $redcolor;
+            padding: 1px 5px;
+            font-size: 10px;
+            font-weight: 500;
+            background-color: rgb(233, 233, 233);
+            border-radius: 3px;
+            transition: 0.05s;
+            &:hover{
+                background-color: $redcolor;
+                color: white;
+            }
+        }
+        &:hover span{
+            background-color: $redcolor;
+            color: white;
+        }
+
+    }    
+}
+
+.choose-address{
+    background-color: white;
+    margin-top: 40px;
+    padding: 20px 20px 0;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    h4{
+        margin-bottom: 5px;
+    }    
+    small{
+        font-size: 16px;
+        font-weight: 600;
+        color: gray;
+    }
+    .icon{
+        i{
+            font-size: 40px;
+        }
+    }
+    .item{
+        padding: 15px;
+        border:  1px solid rgb(221, 221, 221);
+        .info-address{
+            p{
+                height: 39px;
+                font-size: 13px;
+                font-weight: 600;
+            }
+             button{
+                background-color: gray;
+                color: white;
+                border-radius: 2px;
+                border: none;
+                padding: 2px 30px 4px;
+            }
+            span{
+                font-size: 13px;
+                font-weight: bold;
+                margin: 4px 0 0 15px;
+
+            }
+        }
+    }
+    .selected{
+        border-color: $greencolor;
+        button{
+            background-color: $greencolor!important;
+        }
+    }
+}
+.choose-payment{
+    background-color: white;
+    margin: 40px 0;
+    padding: 25px;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    .header-tab{
+        h4{
+            margin-bottom: 5px;
+        }    
+        small{
+            font-size: 16px;
+            font-weight: 600;
+            color: gray;
+        }
+        ul{
+            padding: 0;
+            li{
+                list-style-type: none;
+                padding: 25px 20px;
+                font-size: 10px;
+                cursor: pointer;
+                i{
+                    font-size: 12px;
+                    padding: 8px;
+                    color: white;
+                    background-color: rgb(66, 66, 66);
+                    border-radius: 50%;
+                    margin-right: 10px;
+                }
+                small{
+                    font-size: 12px;
+                    color: black;
+                }
+            }
+        }
+    }
+    .body-tab{
+        background-color: #f3f7f8;
+        padding: 28px 20px;
+        [body-tab=debit],[body-tab=food]{
+            .item{
+                padding: 10px 0;
+                p{
+                    margin-bottom: 5px;
+                    font-size: 14px;
+                    font-weight: 600;
+                }
+                i{
+                    font-size: 28px;
+                    margin: 4px;
+                    color: rgb(99, 99, 99);
+                }
+            }
+            .cart-number{
+                div{
+                    position: relative;
+                    input{
+                        background-color: white;
+                    }
+                    i{
+                        position: absolute;
+                        top: -4px;
+                        right: -4px;
+                        padding: 12px;
+                        font-size: 12px;
+                        background-color: #f3f7f8;
+                        border: 1px solid gray;
+                        border-radius: 0 3px 3px 0;
+                    }
+                }
+            }
+            .fa-check{
+                color: #f3f7f8;
+                border: 1px solid gray;
+                border-radius: 3px;
+                font-size: 12px;
+                padding: 1px;
+            }
+            .saved{
+                background-color: #0056b3;
+            }
+            a{
+                background-color: $greencolor;
+                width: 100%;
+                color: white;
+                font-weight: 600;
+            }
+        }
+        [body-tab=credit]{
+            .item{
+                margin-bottom: 15px;
+                background-color: white;
+                padding: 20px;
+                border:  1px solid rgb(226, 226, 226);
+                i{
+                    border-radius: 50px;
+                }
+                p{
+                    font-size: 13px;
+                    font-weight: 600;
+                    color: gray;
+                }
+                a{
+                    color: $redcolor;
+                    font-weight: bold;
+                    font-size: 14px;
+                    &:hover{
+                        text-decoration: none;
+                        color: #0056b3;
+                    }
+                }
+            }
+        }
+        [body-tab=netbanking]{
+            p{
+                display: inline-flex;
+                border:  1px solid $redcolor;
+                border-radius: 3px;
+                color: $redcolor;
+                span{
+                    display: inline-block;
+                    padding: 6px 10px;
+                    border-right: 1px solid $redcolor;
+                    font-size: 12px;
+                    font-weight: 600;
+                    margin: 0;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: $redcolor;
+                        color: white;
+                    }                
+                    &:last-child{
+                        border-right: none;
+                    }
+                }    
+            }
+            a{
+                color: white;
+                font-weight: bold;
+                font-size: 14px;
+                width: 100%;
+                padding: 20px;
+                margin-top: 20px;
+            }
+        }
+        [body-tab=delivery]{
+            span{
+                font-size: 12px;
+                font-weight: 600;
+                color: gray;
+            }
+            hr{
+                margin: 20px 0;
+            }
+            a{
+                color: white;
+                font-weight: bold;
+                font-size: 14px;
+                width: 100%;
+                padding: 20px;
+                background-color: $greencolor;
+            }
+
+        }
+    }
+}
+.your-order{
+    border-radius: 2px;
+    background-color: $redcolor;
+    padding: 25px 20px;
+    .header-orders{
+        display: flex;
+        color: white;
+        img{
+            width: 100%;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+        span{
+            font-size: 10px;
+            font-weight: 600;
+        }
+    }
+    .items{
+        margin: 30px 0 10px;
+        border-radius: 3px;
+        background-color: white;
+        .item{
+            height: 50px;
+            padding: 11px 0px 11px 15px;
+            position: relative;
+            border-bottom: 1px solid rgb(209, 209, 209);
+            &:last-child{
+                border: none;
+            }
+            p{
+                margin: 0 0 0 23px;
+                font-size: 14px;
+                font-weight: 600;
+            }
+            .fa-circle{
+                top: 18px;
+                position: absolute;
+                font-size: 7px;
+                border: 1px solid $redcolor;
+                padding: 3px;
+                color: $redcolor;
+            }
+            button{
+                padding-right: 8px;
+                height: 30px;
+                background-color: transparent;
+                font-size: 14px;
+                border: 1px solid;
+                margin-right:10px;
+                transition: 0.1s;
+            }
+            .count-item{
+                width: 110px;
+                button{
+                    border: 1px solid gray;
+                    padding: 0;
+                    width: 25px;
+                    margin: -3px;
+                    height: 28px;
+                }
+                
+                .count{
+                    background-color: gray;
+                    color: white;
+                }
+                span{
+                    width: 20px;
+                    margin-left: 6px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: gray;
+                }
+            }
+            button:hover{
+                color: white;
+                background-color: gray;
+            }
+            [disabled]:hover{
+                background-color: transparent;
+            }
+
+
+        }
+    }
+    .promocode-suggestions{
+        background-color: white;
+        padding: 10px;
+        .promocode{
+            width: 100%;
+            display: inline-block;
+            input{
+                width: 73%;
+                border: 1px solid rgb(197, 197, 197);
+                padding: 5px 10px;
+            }
+            button{
+                position: absolute;
+                width:85px;
+                border: none;
+                background-color: $redcolor;
+                color: white;
+                padding: 6px 10px;
+                right: 45px;
+                display: inline-flex;
+                align-items: center;
+                i{
+                    margin-top: 2px;
+                    margin-right: 5px;
+                    font-size: 7px;
+                    color: $redcolor;
+                    background-color: white;
+                    padding: 3px 4px 3px 3px;
+                    border-radius: 50%;
+                    font-weight: bold;
+                }
+
+            }
+        }
+        .suggestion{
+            margin-top: 10px;
+            border:  1px solid rgb(223, 223, 223);
+            .icon{
+                width: 15%;
+                background-color: rgb(236, 236, 236);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-right: 1px solid rgb(223, 223, 223);
+                i{
+                    color: rgb(71, 71, 71);
+                }
+            }
+            textarea{
+                width: 85%;
+                border: none;
+                padding: 5px 10px;
+            }
+        }
+    }
+    .total-priece{
+        background-color: white;
+        padding: 10px;
+        margin-top: 10px;
+        p{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+            span{
+                font-size: 13px;
+                font-weight: 600;
+                color: gray;
+            }
+            small{
+                font-size: 13px;
+                font-weight: bold;
+                color: rgb(105, 105, 105);
+                
+            }
+        }
+        .discount span, .discount small{
+            color: $greencolor;
+        }
+        .total{
+            margin-top: 15px;
+            padding-top: 16px;
+            border-top: 1px solid rgb(221, 221, 221); 
+            span{
+                font-weight: bold;
+                font-size: 16px;
+                color: black;
+            }
+            small{
+                font-weight: bold;
+                font-size: 16px;
+                color: black;
+                letter-spacing: 0.5px;
+            }
+        }
+    }
+
+
+
+    a{
+        background-color: $greencolor;
+        color: white;
+        font-weight: bold;
+        font-size: 17px;
+        margin-top: 10px;
+        width: 100%;
+        padding: 12px;
+        letter-spacing: 1px;
+        &:hover{
+            color: white;
+        }
+    }
+}
+
+#add-address{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    top: 0;        
+    display: flex;
+    align-items: center;
+    z-index: -1;
+    opacity: 0;
+    .center{
+        position: relative;
+        width: 500px;
+        height: 500px;
+        background-color: white;
+        padding: 10px;
+        .fa-times{
+            position: absolute;
+            right: 15px;
+            font-weight: bolder;
+            font-size: 22px;
+            cursor: pointer;
+            color: rgb(77, 77, 77);
+        }
+        .item{
+            position: relative;
+            margin: 20px 0;
+            border-radius: 3px;
+            h6{
+                font-size: 14px;
+            }
+            input{
+                font-size: 12px;
+            }
+            i{
+                position: absolute;
+                right: 0px;
+                top: 24.5px;
+                border: 1px solid gray;
+                border-radius: 0 3px 3px 0;
+                padding: 7px;
+                transition: 0.2s;
+                &:hover{
+                    background-color: rgb(92, 92, 92);
+                    color: white;
+                }
+            }
+            button{
+                border: none;
+                background-color: #17a2b8;
+                color: white;
+                width: 33%;
+                padding: 8px;
+            }
+            .selected{
+                background-color: #117a8b
+            }
+        }
+        .cancel{
+            width: 49%;
+            border:  1px solid $redcolor;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            color: red;
+            &:hover{
+                background-color: $redcolor;
+                color: white;
+            }
+        }
+        .submit{
+            width: 49%;
+            border:  1px solid $redcolor;
+            text-align: center;
+            padding: 10px;
+            color: white;
+            background-color: $redcolor;
+            font-size: 14px;
+
+
+        }
+
+    }
+}
