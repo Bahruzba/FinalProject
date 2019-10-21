@@ -1,0 +1,478 @@
+#account{
+    padding: 25px 0;
+    background-color: #f3f7f8;
+    box-shadow: inset 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    .account{
+        background-color: white;
+        box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+        .my-info{
+            text-align: center;
+            padding: 25px;
+            img{
+                width: 80px;
+                border-radius: 50%;
+            }
+            h6{
+                margin-top: 20px;
+            }
+            p{
+                font-size: 12px;
+                color: gray;
+                margin-bottom: 3px;
+                font-weight: 600;
+            }
+            small{
+                font-weight: bold;
+                color: $redcolor;
+                cursor: pointer;
+                transition: 0.2s;
+                &:hover{
+                    color: #0056b3;
+                }
+            }
+        }
+        .tab-header{
+            padding-bottom: 10px;
+            ul{
+                padding-left: 20px;
+                list-style-type: none;
+                li{
+                    cursor: pointer;
+                    padding: 20px 0;
+                    i{
+                        margin: 0 15px;
+                        color: white;
+                        padding: 10px;
+                        border-radius: 50%;
+                        background-color: rgb(41, 41, 41);
+                        font-size: 12px;
+                    }
+                    .fa-map-marker-alt{
+                        padding: 10px 12px;
+                    }
+                    small{
+                        font-size: 14px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+    [tab-body=orders]{
+        background-color: white;
+        box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+        padding: 25px;
+        h4{
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .item{
+            margin-bottom: 25px;
+            padding: 25px;
+            border-radius: 3px;
+            border: 1px solid rgb(221, 221, 221);
+            box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+            img{
+                width: 70px;
+                border-radius: 2px;
+            }
+            .name-item{
+                color: black;
+                font-weight: 600;
+                transition: 0.2s;
+                &:hover{
+                    color: #0056b3;
+                    text-decoration: none;
+                }
+            }
+            .status-item{
+                color: #17a2b8;
+                text-decoration: none;
+                font-size: 13px;
+                font-weight: 600;
+                i{
+                    color: $greencolor;
+                }
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+            p{
+                font-size: 12px;
+                color: gray;
+                font-weight: 600;
+                margin-bottom: 5px;
+            }
+            span{
+                font-size: 13px;
+                font-weight: 600;
+            }
+            .total{
+                color: black;
+                font-weight: bold;
+                span{
+                    color: $redcolor;
+                }
+            }
+            .btn{
+                font-size: 12px;
+                padding: 10px 0px;
+                width: 130px;
+                border-radius: 2px;
+            }
+            .help{
+                color: $redcolor;
+                border: 1px solid $redcolor;
+                transition: 0.2s;
+                &:hover{
+                    background-color: $redcolor;
+                    color: white;
+                }
+            }
+            .reorder{
+                color: white;
+                background-color: $redcolor;
+            }
+        }
+    }
+    [tab-body=offers]{
+        background-color: white;
+        padding: 25px;
+        box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+        h4{
+            font-weight: bold;
+        }
+        .item{
+            border:  1px solid rgb(224, 224, 224);
+            box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+            padding:25px;
+            background-color: white;
+            .cart-icon{
+                border: 1px dotted #daceb7;
+                background-color: #fffae6;
+                width: fit-content;
+                padding: 5px;
+                border-radius: 2px;
+                .img{
+                    padding: 2px;
+                    width: 25px;
+                    &::before{
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 6px 5px 0 5px;
+                        border-color: #daceb7 transparent transparent transparent;
+                        position: absolute;
+                        left: 73px;
+                        top: 25px;    
+                    }
+                    &::after{
+                        content: '';
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 0 5px 6px 5px;
+                        border-color: #daceb7 transparent #daceb7 transparent;                    position: absolute;
+                        left: 73px;
+                        top: 59px;    
+                    }
+                    img{
+                        margin-top: -3px;
+                        border-radius: 50%;
+                        width: 100%;
+                    }
+                }
+                .name-cart{
+                    padding: 2px 2px 2px 15px;
+                    font-weight: 600;
+                    color: #17a2b8;
+                }
+            }
+            h5{
+                font-size: 18px;
+            }
+            h6{
+                color: rgb(124, 124, 124); 
+                font-size: 14px;
+            }
+            .copy-more{
+                a{
+                    color: $redcolor;
+                    font-weight: 600;
+                    font-size: 14px;
+                    transition: 0.2s;
+                    &:hover{
+                        color: #0056b3;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    
+    }
+    [tab-body=favourites]{
+        background-color: white;
+        padding: 25px;
+        box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+        .item{
+            padding: 9px;
+            background-color: white;
+            position: relative;
+            .img{
+                position: relative;
+                img{
+                    width: 100%;
+                }
+                .promoted{
+                    color: white;
+                    position: absolute;
+                    background-color: rgb(71, 71, 71);
+                    top: 12px;
+                    left: 15px;
+                    font-size: 11px;
+                    font-weight: 600;
+                    padding: 1px 5px 2px;
+                    border-radius: 2px;
+                }
+                .fa-heart{
+                    position: absolute;
+                    color: $redcolor;
+                    background-color: white;
+                    border-radius: 50%;
+                    padding: 6px 6px 5px 5px;
+                    font-size: 14px;
+                    top: 10px;
+                    right: 10px;
+                    transition: 0.1s;
+                    &:hover{
+                        color: #3868fb
+                    }
+                }
+                .reating{
+                    width: 80px;
+                    color: white;
+                    position: absolute;
+                    bottom: 15px;
+                    right: 15px;
+                    background-color: $greencolor;
+                    font-size: 11px;
+                    font-weight: 700;
+                    padding: 1px 5px 2px;
+                    border-radius: 2px;
+                    .fa-star{
+                        font-size: 10px;
+                    }
+                }
+            }
+
+            .under-image{
+                padding: 15px;
+                box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+                .name-meal{
+                    color: black;
+                    font-weight: 600;
+                    &:hover{
+                        text-decoration: none;
+                        color: #007bff;
+                    }
+                }
+                .about-meal{
+                    font-size: 13px;
+                    color: $graycolor;
+                    font-weight: 600;
+                }
+                .time-delivery{
+                    color: rgb(102, 102, 102);
+                    font-size: 13px;
+                    font-weight: 700;
+
+                    i{
+                        font-size: 12px;
+                    }
+                }
+                .priece-delivery{
+                    margin-top: 4px;
+                    float: right;
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: rgb(156, 156, 156);
+                }
+                .cupon{
+                    color: gray;
+                    font-size: 10px;
+                    font-weight: 700;
+                    margin-top: 10px;
+                    margin-bottom: 0;
+                    span{
+                        color: white;
+                        background-color: $greencolor;
+                        border-radius: 4px;
+                        cursor: default;
+                    }
+                }
+            }    
+        }
+        .loading{
+            position: relative;
+            background-color: $redcolor;
+            color: white;
+            font-weight: 600;
+            &::before{
+                content: '';
+                position: absolute;
+                background-color: white;
+                padding: 1px;
+                border-radius: 50%;
+                left: 20px;
+                top: 18px;
+                // animation-name: loading;
+                animation: loading 0.7s infinite;
+            }
+        }
+    
+    }
+    [tab-body=payments]{
+        background-color: white;
+        padding: 25px;
+        box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+        .item{
+            margin: 15px 0;
+            border-radius: 3px;
+            padding: 25px;
+            border: 1px solid rgb(219, 219, 219);
+            box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+            img{
+                width: 90%;
+                border-radius: 50%;
+            }
+            .card-info{
+                h6{
+                    margin-bottom: 5px;
+                }
+                p{
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: gray;
+                    span{
+                        font-size: 13px;
+                        margin-left: 5px;
+                    }
+                }
+                small{
+                    display: flex;
+                    align-items: center;
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: $redcolor;
+                    cursor: pointer;
+                    &:hover{
+                        color: rgb(197, 0, 0);
+                    }
+                    i{
+                        font-size: 12px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+    [tab-body=addresses]{
+        background-color: white;
+        padding: 25px;
+        box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+        .item{
+            margin: 15px 0;
+            border-radius: 3px;
+            padding: 25px;
+            border: 1px solid rgb(219, 219, 219);
+            box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+            .icon i{
+                font-size: 35px;
+            }
+            h6{
+                color: gray;
+                font-weight: bold;
+            }
+            p{
+                font-size: 12px;
+                font-weight: 600;
+            }
+            .edit-delete{
+                small{
+                font-weight: 600;
+                color: $redcolor;
+                font-weight: 600;
+                margin-right: 15px;
+                transition: 0.2s;
+                cursor: pointer;
+                }
+                .edit:hover{
+                    color: #0056b3;
+                }
+                .delete:hover{
+                    color: #a71d2a;
+                }
+            }
+        }
+    }
+}
+
+#edit-profile{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    top: 0;        
+    display: flex;
+    align-items: center;
+    z-index: -1;
+    opacity: 0;
+    .center{
+        position: relative;
+        width: 400px;
+        height: 500px;
+        background-color: white;
+        padding: 20px;
+        .fa-times{
+            position: absolute;
+            right: 15px;
+            font-weight: bolder;
+            font-size: 22px;
+            cursor: pointer;
+            color: rgb(77, 77, 77);
+        }
+        p{
+            margin-bottom: 10px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        input{
+            margin-bottom: 20px;
+        }
+        .cancel{
+            width: 49%;
+            border:  1px solid $redcolor;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            color: red;
+            cursor: pointer;
+            &:hover{
+                background-color: $redcolor;
+                color: white;
+            }
+        }
+        .submit{
+            width: 49%;
+            border:  1px solid $redcolor;
+            text-align: center;
+            padding: 10px;
+            color: white;
+            background-color: $redcolor;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+    }
+}

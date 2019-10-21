@@ -160,6 +160,7 @@ function CloseAddAddress(){
 $("#add-address .cancel").click(function(){
     CloseAddAddress();
 })
+
 $("#add-address .fa-times").click(function(){
     CloseAddAddress();
 })
@@ -171,6 +172,34 @@ $(".choose-address .new-address").click(function(){
     })
 })
 
+//open edit address modal
+$("#account [tab-body=addresses] .edit").click(function(){
+    $("#add-address").css("z-index","1").animate({
+        opacity: 1
+    })
+})
+
+//open edit profile modal
+$("#account .my-info small").click(function(){
+    $("#edit-profile").css("z-index","1").animate({
+        opacity: 1
+    })
+})
+
+//Close edit profile model
+function CloseEditProfile(){
+    $("#edit-profile").animate({
+        opacity:0,zIndex:-1
+    })
+}
+
+$("#edit-profile .cancel").click(function(){
+    CloseEditProfile();
+})
+
+$("#edit-profile .fa-times").click(function(){
+    CloseEditProfile();
+})
 
 //rating grafic
 function Start(){
@@ -202,13 +231,25 @@ $(".choose-payment .fa-check").click(function(){
     $(this).toggleClass("saved");
 })
 
+//tab menu in checkout page
 $(".choose-payment .header-tab li").click(function(){
     $(".choose-payment .header-tab li").css("background-color","white");
     $(this).css("background-color","#f3f7f8");
     var tab=$(this).attr("tab-header");
     $(".choose-payment .body-tab [body-tab]").addClass("d-none");
     $(".choose-payment .body-tab [body-tab="+tab+"]").removeClass("d-none");
+})
 
+// tab menu in account page
+$("#account .account .tab-header li").click(function(){
+    $("#account .account .tab-header li").css("background-color","white");
+    $(this).css("background-color","#f3f7f8");
+    var tab=$(this).attr("tab-header");
+    $("#account [tab-body]").animate({opacity:"0"}).animate({opacity:1});
+    setTimeout(function(){ 
+        $("#account [tab-body]").addClass("d-none");
+        $("#account [tab-body="+tab+"]").removeClass("d-none");
+    }, 400);
 
 })
 

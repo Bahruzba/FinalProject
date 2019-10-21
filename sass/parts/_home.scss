@@ -155,42 +155,6 @@ section{
             
         }
     }
-    // .mini-slider{
-    //     .text-mini-header{
-    //         margin-left: 15px; 
-    //         margin-bottom: 10px;
-    //     }
-    //     .item{
-    //         border: 1px solid white;
-    //         background-color: white;
-    //         margin: 0 3px;
-    //         border-radius: 5px;
-    //         .img{
-    //             margin-top: 8px;
-    //             width: 50%;
-    //             border-radius: 50%;
-    //             overflow: hidden;
-    //             margin-left: auto;
-    //             margin-right: auto;
-    //             margin-bottom: 10px;
-    //         }
-    //         .name-mael{
-    //             color: $redcolor;
-    //             font-size: 12px;
-    //             margin-bottom: 3px;
-    //         }
-    //         .count-meal{
-    //             color: $graycolor;
-    //             font-size: 12px;
-    //         }
-    //         a:hover{
-    //             text-decoration: none;
-    //         }
-    //         &:hover{
-    //             border: 1px solid red;
-    //         }
-    //     }
-    // }
 }
 
 .mini-slider{
@@ -256,8 +220,51 @@ section{
         .item{
             padding: 9px;
             background-color: white;
-            img{
-                width: 100%;
+            a{
+                position: relative;
+                img{
+                    width: 100%;
+                }
+            }
+            .promoted{
+                color: white;
+                position: absolute;
+                background-color: rgb(71, 71, 71);
+                top: 12px;
+                left: 25px;
+                font-size: 11px;
+                font-weight: 600;
+                padding: 1px 5px 2px;
+                border-radius: 2px;
+            }
+            .fa-heart{
+                position: absolute;
+                color: $redcolor;
+                background-color: white;
+                border-radius: 50%;
+                padding: 6px 6px 5px 5px;
+                font-size: 14px;
+                top: 5px;
+                right: 25px;
+                transition: 0.1s;
+                &:hover{
+                    color: #3868fb
+                }
+            }
+            .reating{
+                width: 80px;
+                color: white;
+                position: absolute;
+                top: 130px;
+                right: 25px;
+                background-color: $greencolor;
+                font-size: 11px;
+                font-weight: 700;
+                padding: 1px 5px 2px;
+                border-radius: 2px;
+                .fa-star{
+                    font-size: 10px;
+                }
             }
             .under-image{
                 padding: 15px;

@@ -170,8 +170,45 @@ section {
   #popular-brands .item {
     padding: 9px;
     background-color: white; }
-    #popular-brands .item img {
-      width: 100%; }
+    #popular-brands .item a {
+      position: relative; }
+      #popular-brands .item a img {
+        width: 100%; }
+    #popular-brands .item .promoted {
+      color: white;
+      position: absolute;
+      background-color: #474747;
+      top: 12px;
+      left: 25px;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 1px 5px 2px;
+      border-radius: 2px; }
+    #popular-brands .item .fa-heart {
+      position: absolute;
+      color: #ff3008;
+      background-color: white;
+      border-radius: 50%;
+      padding: 6px 6px 5px 5px;
+      font-size: 14px;
+      top: 5px;
+      right: 25px;
+      transition: 0.1s; }
+      #popular-brands .item .fa-heart:hover {
+        color: #3868fb; }
+    #popular-brands .item .reating {
+      width: 80px;
+      color: white;
+      position: absolute;
+      top: 130px;
+      right: 25px;
+      background-color: #3ecf8e;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 1px 5px 2px;
+      border-radius: 2px; }
+      #popular-brands .item .reating .fa-star {
+        font-size: 10px; }
     #popular-brands .item .under-image {
       padding: 15px;
       box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); }
@@ -315,43 +352,43 @@ footer #end-footer {
   background-image: url("/img/register.png");
   background-position: left;
   background-repeat: no-repeat;
-  background-size: 50%; }
-
-.form {
-  margin: auto;
-  margin-top: 150px; }
-  .form .header-form-register {
-    font-size: 28px;
-    font-weight: 300;
-    margin-bottom: 40px; }
-  .form form p {
-    position: absolute;
-    font-size: 12px;
-    font-weight: 600;
-    color: #444444;
-    margin-top: 8px; }
-  .form form input {
-    border: 0px;
-    border-bottom: 1px solid #d6d6d6;
-    border-radius: 0;
-    margin-bottom: 50px;
-    padding: 0; }
-  .form form button {
-    border-color: #ff3008;
-    color: #ff3008;
-    font-weight: 700;
-    font-size: 16px;
-    height: 50px; }
-  .form .text-center {
-    margin-top: 30px;
-    font-size: 12px;
-    font-weight: 600; }
-    .form .text-center a {
+  background-size: 50%;
+  height: 800px; }
+  #register .form {
+    margin: auto;
+    margin-top: 150px; }
+    #register .form .header-form-register {
+      font-size: 28px;
+      font-weight: 300;
+      margin-bottom: 40px; }
+    #register .form form p {
+      position: absolute;
+      font-size: 12px;
+      font-weight: 600;
+      color: #444444;
+      margin-top: 8px; }
+    #register .form form input {
+      border: 0px;
+      border-bottom: 1px solid #d6d6d6;
+      border-radius: 0;
+      margin-bottom: 50px;
+      padding: 0; }
+    #register .form form button {
+      border-color: #ff3008;
       color: #ff3008;
-      font-weight: 700; }
-      .form .text-center a:hover {
-        text-decoration: none;
-        color: #6363bd; }
+      font-weight: 700;
+      font-size: 16px;
+      height: 50px; }
+    #register .form .text-center {
+      margin-top: 30px;
+      font-size: 12px;
+      font-weight: 600; }
+      #register .form .text-center a {
+        color: #ff3008;
+        font-weight: 700; }
+        #register .form .text-center a:hover {
+          text-decoration: none;
+          color: #6363bd; }
 
 #header-pages {
   background-color: black;
@@ -407,7 +444,11 @@ footer #end-footer {
       color: #7c7c7c; }
     #available-coupons .items .item .copy-more a {
       color: #ff3008;
-      font-weight: 600; }
+      font-weight: 600;
+      transition: 0.2s; }
+      #available-coupons .items .item .copy-more a:hover {
+        color: #0056b3;
+        text-decoration: none; }
 
 #bank-offers {
   padding: 60px 0;
@@ -1135,8 +1176,10 @@ footer #end-footer {
       padding: 12px;
       letter-spacing: 1px; }
 
-body {
-  background-color: #f3f7f8; }
+#checkout {
+  background-color: #f3f7f8;
+  padding-top: 50px;
+  box-shadow: inset 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); }
 
 .you-may-also-like {
   background-color: white;
@@ -1723,5 +1766,384 @@ body {
       #invoice .invoice .order-info table tr:last-child td {
         color: #3ecf8e;
         font-size: 16px; }
+
+#account {
+  padding: 25px 0;
+  background-color: #f3f7f8;
+  box-shadow: inset 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); }
+  #account .account {
+    background-color: white;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); }
+    #account .account .my-info {
+      text-align: center;
+      padding: 25px; }
+      #account .account .my-info img {
+        width: 80px;
+        border-radius: 50%; }
+      #account .account .my-info h6 {
+        margin-top: 20px; }
+      #account .account .my-info p {
+        font-size: 12px;
+        color: gray;
+        margin-bottom: 3px;
+        font-weight: 600; }
+      #account .account .my-info small {
+        font-weight: bold;
+        color: #ff3008;
+        cursor: pointer;
+        transition: 0.2s; }
+        #account .account .my-info small:hover {
+          color: #0056b3; }
+    #account .account .tab-header {
+      padding-bottom: 10px; }
+      #account .account .tab-header ul {
+        padding-left: 20px;
+        list-style-type: none; }
+        #account .account .tab-header ul li {
+          cursor: pointer;
+          padding: 20px 0; }
+          #account .account .tab-header ul li i {
+            margin: 0 15px;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            background-color: #292929;
+            font-size: 12px; }
+          #account .account .tab-header ul li .fa-map-marker-alt {
+            padding: 10px 12px; }
+          #account .account .tab-header ul li small {
+            font-size: 14px;
+            font-weight: 600; }
+  #account [tab-body=orders] {
+    background-color: white;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    padding: 25px; }
+    #account [tab-body=orders] h4 {
+      font-weight: bold;
+      margin-bottom: 20px; }
+    #account [tab-body=orders] .item {
+      margin-bottom: 25px;
+      padding: 25px;
+      border-radius: 3px;
+      border: 1px solid #dddddd;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); }
+      #account [tab-body=orders] .item img {
+        width: 70px;
+        border-radius: 2px; }
+      #account [tab-body=orders] .item .name-item {
+        color: black;
+        font-weight: 600;
+        transition: 0.2s; }
+        #account [tab-body=orders] .item .name-item:hover {
+          color: #0056b3;
+          text-decoration: none; }
+      #account [tab-body=orders] .item .status-item {
+        color: #17a2b8;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 600; }
+        #account [tab-body=orders] .item .status-item i {
+          color: #3ecf8e; }
+        #account [tab-body=orders] .item .status-item:hover {
+          text-decoration: none; }
+      #account [tab-body=orders] .item p {
+        font-size: 12px;
+        color: gray;
+        font-weight: 600;
+        margin-bottom: 5px; }
+      #account [tab-body=orders] .item span {
+        font-size: 13px;
+        font-weight: 600; }
+      #account [tab-body=orders] .item .total {
+        color: black;
+        font-weight: bold; }
+        #account [tab-body=orders] .item .total span {
+          color: #ff3008; }
+      #account [tab-body=orders] .item .btn {
+        font-size: 12px;
+        padding: 10px 0px;
+        width: 130px;
+        border-radius: 2px; }
+      #account [tab-body=orders] .item .help {
+        color: #ff3008;
+        border: 1px solid #ff3008;
+        transition: 0.2s; }
+        #account [tab-body=orders] .item .help:hover {
+          background-color: #ff3008;
+          color: white; }
+      #account [tab-body=orders] .item .reorder {
+        color: white;
+        background-color: #ff3008; }
+  #account [tab-body=offers] {
+    background-color: white;
+    padding: 25px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); }
+    #account [tab-body=offers] h4 {
+      font-weight: bold; }
+    #account [tab-body=offers] .item {
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+      padding: 25px;
+      background-color: white; }
+      #account [tab-body=offers] .item .cart-icon {
+        border: 1px dotted #daceb7;
+        background-color: #fffae6;
+        width: fit-content;
+        padding: 5px;
+        border-radius: 2px; }
+        #account [tab-body=offers] .item .cart-icon .img {
+          padding: 2px;
+          width: 25px; }
+          #account [tab-body=offers] .item .cart-icon .img::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 6px 5px 0 5px;
+            border-color: #daceb7 transparent transparent transparent;
+            position: absolute;
+            left: 73px;
+            top: 25px; }
+          #account [tab-body=offers] .item .cart-icon .img::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 0 5px 6px 5px;
+            border-color: #daceb7 transparent #daceb7 transparent;
+            position: absolute;
+            left: 73px;
+            top: 59px; }
+          #account [tab-body=offers] .item .cart-icon .img img {
+            margin-top: -3px;
+            border-radius: 50%;
+            width: 100%; }
+        #account [tab-body=offers] .item .cart-icon .name-cart {
+          padding: 2px 2px 2px 15px;
+          font-weight: 600;
+          color: #17a2b8; }
+      #account [tab-body=offers] .item h5 {
+        font-size: 18px; }
+      #account [tab-body=offers] .item h6 {
+        color: #7c7c7c;
+        font-size: 14px; }
+      #account [tab-body=offers] .item .copy-more a {
+        color: #ff3008;
+        font-weight: 600;
+        font-size: 14px;
+        transition: 0.2s; }
+        #account [tab-body=offers] .item .copy-more a:hover {
+          color: #0056b3;
+          text-decoration: none; }
+  #account [tab-body=favourites] {
+    background-color: white;
+    padding: 25px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); }
+    #account [tab-body=favourites] .item {
+      padding: 9px;
+      background-color: white;
+      position: relative; }
+      #account [tab-body=favourites] .item .img {
+        position: relative; }
+        #account [tab-body=favourites] .item .img img {
+          width: 100%; }
+        #account [tab-body=favourites] .item .img .promoted {
+          color: white;
+          position: absolute;
+          background-color: #474747;
+          top: 12px;
+          left: 15px;
+          font-size: 11px;
+          font-weight: 600;
+          padding: 1px 5px 2px;
+          border-radius: 2px; }
+        #account [tab-body=favourites] .item .img .fa-heart {
+          position: absolute;
+          color: #ff3008;
+          background-color: white;
+          border-radius: 50%;
+          padding: 6px 6px 5px 5px;
+          font-size: 14px;
+          top: 10px;
+          right: 10px;
+          transition: 0.1s; }
+          #account [tab-body=favourites] .item .img .fa-heart:hover {
+            color: #3868fb; }
+        #account [tab-body=favourites] .item .img .reating {
+          width: 80px;
+          color: white;
+          position: absolute;
+          bottom: 15px;
+          right: 15px;
+          background-color: #3ecf8e;
+          font-size: 11px;
+          font-weight: 700;
+          padding: 1px 5px 2px;
+          border-radius: 2px; }
+          #account [tab-body=favourites] .item .img .reating .fa-star {
+            font-size: 10px; }
+      #account [tab-body=favourites] .item .under-image {
+        padding: 15px;
+        box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); }
+        #account [tab-body=favourites] .item .under-image .name-meal {
+          color: black;
+          font-weight: 600; }
+          #account [tab-body=favourites] .item .under-image .name-meal:hover {
+            text-decoration: none;
+            color: #007bff; }
+        #account [tab-body=favourites] .item .under-image .about-meal {
+          font-size: 13px;
+          color: #7a7e8a;
+          font-weight: 600; }
+        #account [tab-body=favourites] .item .under-image .time-delivery {
+          color: #666666;
+          font-size: 13px;
+          font-weight: 700; }
+          #account [tab-body=favourites] .item .under-image .time-delivery i {
+            font-size: 12px; }
+        #account [tab-body=favourites] .item .under-image .priece-delivery {
+          margin-top: 4px;
+          float: right;
+          font-size: 12px;
+          font-weight: 600;
+          color: #9c9c9c; }
+        #account [tab-body=favourites] .item .under-image .cupon {
+          color: gray;
+          font-size: 10px;
+          font-weight: 700;
+          margin-top: 10px;
+          margin-bottom: 0; }
+          #account [tab-body=favourites] .item .under-image .cupon span {
+            color: white;
+            background-color: #3ecf8e;
+            border-radius: 4px;
+            cursor: default; }
+    #account [tab-body=favourites] .loading {
+      position: relative;
+      background-color: #ff3008;
+      color: white;
+      font-weight: 600; }
+      #account [tab-body=favourites] .loading::before {
+        content: '';
+        position: absolute;
+        background-color: white;
+        padding: 1px;
+        border-radius: 50%;
+        left: 20px;
+        top: 18px;
+        animation: loading 0.7s infinite; }
+  #account [tab-body=payments] {
+    background-color: white;
+    padding: 25px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); }
+    #account [tab-body=payments] .item {
+      margin: 15px 0;
+      border-radius: 3px;
+      padding: 25px;
+      border: 1px solid #dbdbdb;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); }
+      #account [tab-body=payments] .item img {
+        width: 90%;
+        border-radius: 50%; }
+      #account [tab-body=payments] .item .card-info h6 {
+        margin-bottom: 5px; }
+      #account [tab-body=payments] .item .card-info p {
+        font-size: 12px;
+        font-weight: 600;
+        color: gray; }
+        #account [tab-body=payments] .item .card-info p span {
+          font-size: 13px;
+          margin-left: 5px; }
+      #account [tab-body=payments] .item .card-info small {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-weight: bold;
+        color: #ff3008;
+        cursor: pointer; }
+        #account [tab-body=payments] .item .card-info small:hover {
+          color: #c50000; }
+        #account [tab-body=payments] .item .card-info small i {
+          font-size: 12px;
+          margin-right: 5px; }
+  #account [tab-body=addresses] {
+    background-color: white;
+    padding: 25px;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); }
+    #account [tab-body=addresses] .item {
+      margin: 15px 0;
+      border-radius: 3px;
+      padding: 25px;
+      border: 1px solid #dbdbdb;
+      box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); }
+      #account [tab-body=addresses] .item .icon i {
+        font-size: 35px; }
+      #account [tab-body=addresses] .item h6 {
+        color: gray;
+        font-weight: bold; }
+      #account [tab-body=addresses] .item p {
+        font-size: 12px;
+        font-weight: 600; }
+      #account [tab-body=addresses] .item .edit-delete small {
+        font-weight: 600;
+        color: #ff3008;
+        font-weight: 600;
+        margin-right: 15px;
+        transition: 0.2s;
+        cursor: pointer; }
+      #account [tab-body=addresses] .item .edit-delete .edit:hover {
+        color: #0056b3; }
+      #account [tab-body=addresses] .item .edit-delete .delete:hover {
+        color: #a71d2a; }
+
+#edit-profile {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  z-index: -1;
+  opacity: 0; }
+  #edit-profile .center {
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    padding: 20px; }
+    #edit-profile .center .fa-times {
+      position: absolute;
+      right: 15px;
+      font-weight: bolder;
+      font-size: 22px;
+      cursor: pointer;
+      color: #4d4d4d; }
+    #edit-profile .center p {
+      margin-bottom: 10px;
+      font-size: 12px;
+      font-weight: 600; }
+    #edit-profile .center input {
+      margin-bottom: 20px; }
+    #edit-profile .center .cancel {
+      width: 49%;
+      border: 1px solid #ff3008;
+      text-align: center;
+      padding: 10px;
+      font-size: 14px;
+      color: red;
+      cursor: pointer; }
+      #edit-profile .center .cancel:hover {
+        background-color: #ff3008;
+        color: white; }
+    #edit-profile .center .submit {
+      width: 49%;
+      border: 1px solid #ff3008;
+      text-align: center;
+      padding: 10px;
+      color: white;
+      background-color: #ff3008;
+      font-size: 14px;
+      cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */
