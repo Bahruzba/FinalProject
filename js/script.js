@@ -81,9 +81,6 @@ $(".form form input").on("input", function(){
         $(this).prev().animate({top:x+2+"px",fontSize:"12px", opacity:"1"},150);
         return;
     }
-    // if($(this).val()==""){
-    //     return;
-    // }
     $(this).prev().animate({top:x-12+"px",fontSize:"10px", opacity:"0.7"},150);
 });
 
