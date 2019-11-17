@@ -56,14 +56,15 @@ namespace Osahaneat.Controllers
                     };
                     context.Users.Add(user);
                     context.SaveChanges();
+
                     Restaurant restaurant = new Restaurant
-                    {
+                    {   
                         PlaceId=place.Id,
                         UserId=user.Id,
                         HolidayOfWeek="SunSat",
                         OpenHours=9,
                         ClooseHours=22,
-                        Address="Baki sehereAllaha sukur butun metrolarin yanindayix"
+                        Address="Allaha sukur butun metrolarin yanindayix"
                     };
                     context.Restaurants.Add(restaurant);
                     context.SaveChanges();
@@ -104,6 +105,16 @@ namespace Osahaneat.Controllers
                     };
                     context.Admins.Add(admin);
                     context.SaveChanges();
+
+                    Review review = new Review
+                    {
+                        Rating = 4,
+                        RestaurantId = restaurant.Id,
+                        CustomerId = customer.Id
+
+                    };
+                    context.Reviews.Add(review);
+                    context.SaveChanges();
                 }
 
                 Meal meal = new Meal
@@ -119,13 +130,13 @@ namespace Osahaneat.Controllers
                 context.Meals.Add(meal);
                 context.SaveChanges();
 
-                Review review = new Review
+                Comment comment = new Comment
                 {
-                    Rating =4,
-                    MealId=meal.Id,
-                    Comment="Canavar Restorandi yetisiko"
+                    RestaurantId = (i - i % 5) / 5 + 1,
+                    CustomerId= (i - i % 5) / 5 + 1,
+                    Context="Sagolsunlar tez catdirillar."
                 };
-                context.Reviews.Add(review);
+                context.Comments.Add(comment);
                 context.SaveChanges();
             }
             return View();

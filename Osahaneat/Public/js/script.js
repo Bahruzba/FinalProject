@@ -211,7 +211,7 @@ $(document).on("click", "#offers .more-item", function () {
     var kitchens = "";
     $("#offers [filter=kitchen] .select").parent().each(function () { kitchens += "," + ($(this).attr("id")); });
     var count = $("#offers .mini-slider").next().children(".item-cover").length;
-    var sort = $(this).attr("value");
+    var sort = $("#offers .dropdown button").attr("value");
 
     restorans = restorans.substr(1);
     categories = categories.substr(1);
@@ -379,11 +379,6 @@ $("#account .account .tab-header li").click(function(){
     }, 400);
 
 })
-
-    //$(document).on("click", "#offers .item .header-tab-menu", function () {
-
-
-    //})
 
 
 });

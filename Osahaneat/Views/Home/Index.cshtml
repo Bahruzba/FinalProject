@@ -142,11 +142,11 @@
                               <span class="text-center reating">
                                   <i class="fas fa-star"></i>
                                   @{var a = 0;}
-                                  @foreach (var review in item.Reviews)
+                                  @foreach (var review in item.Restaurant.Reviews)
                                   {
                                       a += review.Rating;
                                   }
-                                  @(item.Reviews.Count != 0 ? (a / item.Reviews.Count).ToString("0.0") + " (" + item.Reviews.Count + "+)" : "0 (0)")
+                                  @(item.Restaurant.Reviews.Count != 0 ? (a / item.Restaurant.Reviews.Count).ToString("0.0") + " (" + item.Restaurant.Reviews.Count + "+)" : "0 (0)")
                               </span>
                           </a>
                       </div>

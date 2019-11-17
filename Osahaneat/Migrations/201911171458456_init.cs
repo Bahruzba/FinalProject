@@ -46,8 +46,8 @@ namespace Osahaneat.Migrations
                         User_Id = c.Int(),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Customers", t => t.CustomerId, cascadeDelete: false)
                 .ForeignKey("dbo.Restaurants", t => t.RestaurantId, cascadeDelete: false)
+                .ForeignKey("dbo.Customers", t => t.CustomerId, cascadeDelete: false)
                 .ForeignKey("dbo.Users", t => t.User_Id)
                 .Index(t => t.RestaurantId)
                 .Index(t => t.CustomerId)
@@ -65,19 +65,37 @@ namespace Osahaneat.Migrations
                 .Index(t => t.UserId);
             
             CreateTable(
-                "dbo.Orders",
+                "dbo.Comments",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Price = c.Decimal(nullable: false, precision: 18, scale: 2),
-                        MealId = c.Int(nullable: false),
-                        OrderListId = c.Int(nullable: false),
+                        Context = c.String(),
+                        CustomerId = c.Int(nullable: false),
+                        RestaurantId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Meals", t => t.MealId, cascadeDelete: false)
-                .ForeignKey("dbo.OrderLists", t => t.OrderListId, cascadeDelete: false)
-                .Index(t => t.MealId)
-                .Index(t => t.OrderListId);
+                .ForeignKey("dbo.Customers", t => t.CustomerId, cascadeDelete: false)
+                .ForeignKey("dbo.Restaurants", t => t.RestaurantId, cascadeDelete: false)
+                .Index(t => t.CustomerId)
+                .Index(t => t.RestaurantId);
+            
+            CreateTable(
+                "dbo.Restaurants",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        HolidayOfWeek = c.String(nullable: false, maxLength: 21),
+                        OpenHours = c.Int(nullable: false),
+                        ClooseHours = c.Int(nullable: false),
+                        Address = c.String(nullable: false, maxLength: 50),
+                        UserId = c.Int(nullable: false),
+                        PlaceId = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Places", t => t.PlaceId, cascadeDelete: false)
+                .ForeignKey("dbo.Users", t => t.UserId, cascadeDelete: false)
+                .Index(t => t.UserId)
+                .Index(t => t.PlaceId);
             
             CreateTable(
                 "dbo.Meals",
@@ -120,21 +138,19 @@ namespace Osahaneat.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.Restaurants",
+                "dbo.Orders",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        HolidayOfWeek = c.String(nullable: false),
-                        OpenHours = c.Int(nullable: false),
-                        ClooseHours = c.Int(nullable: false),
-                        UserId = c.Int(nullable: false),
-                        PlaceId = c.Int(nullable: false),
+                        Price = c.Decimal(nullable: false, precision: 18, scale: 2),
+                        MealId = c.Int(nullable: false),
+                        OrderListId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Places", t => t.PlaceId, cascadeDelete: false)
-                .ForeignKey("dbo.Users", t => t.UserId, cascadeDelete: false)
-                .Index(t => t.UserId)
-                .Index(t => t.PlaceId);
+                .ForeignKey("dbo.Meals", t => t.MealId, cascadeDelete: false)
+                .ForeignKey("dbo.OrderLists", t => t.OrderListId, cascadeDelete: false)
+                .Index(t => t.MealId)
+                .Index(t => t.OrderListId);
             
             CreateTable(
                 "dbo.Places",
@@ -151,12 +167,14 @@ namespace Osahaneat.Migrations
                     {
                         Id = c.Int(nullable: false, identity: true),
                         Rating = c.Int(nullable: false),
-                        Comment = c.String(),
-                        MealId = c.Int(nullable: false),
+                        CustomerId = c.Int(nullable: false),
+                        RestaurantId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Meals", t => t.MealId, cascadeDelete: false)
-                .Index(t => t.MealId);
+                .ForeignKey("dbo.Customers", t => t.CustomerId, cascadeDelete: false)
+                .ForeignKey("dbo.Restaurants", t => t.RestaurantId, cascadeDelete: false)
+                .Index(t => t.CustomerId)
+                .Index(t => t.RestaurantId);
             
         }
         
@@ -164,25 +182,31 @@ namespace Osahaneat.Migrations
         {
             DropForeignKey("dbo.Admins", "UserId", "dbo.Users");
             DropForeignKey("dbo.OrderLists", "User_Id", "dbo.Users");
-            DropForeignKey("dbo.Orders", "OrderListId", "dbo.OrderLists");
-            DropForeignKey("dbo.Reviews", "MealId", "dbo.Meals");
+            DropForeignKey("dbo.Customers", "UserId", "dbo.Users");
+            DropForeignKey("dbo.OrderLists", "CustomerId", "dbo.Customers");
             DropForeignKey("dbo.Restaurants", "UserId", "dbo.Users");
+            DropForeignKey("dbo.Reviews", "RestaurantId", "dbo.Restaurants");
+            DropForeignKey("dbo.Reviews", "CustomerId", "dbo.Customers");
             DropForeignKey("dbo.Restaurants", "PlaceId", "dbo.Places");
             DropForeignKey("dbo.OrderLists", "RestaurantId", "dbo.Restaurants");
             DropForeignKey("dbo.Meals", "RestaurantId", "dbo.Restaurants");
+            DropForeignKey("dbo.Orders", "OrderListId", "dbo.OrderLists");
             DropForeignKey("dbo.Orders", "MealId", "dbo.Meals");
             DropForeignKey("dbo.Meals", "KitchenId", "dbo.Kitchens");
             DropForeignKey("dbo.Meals", "CategoryMealId", "dbo.CategoryMeals");
-            DropForeignKey("dbo.Customers", "UserId", "dbo.Users");
-            DropForeignKey("dbo.OrderLists", "CustomerId", "dbo.Customers");
-            DropIndex("dbo.Reviews", new[] { "MealId" });
-            DropIndex("dbo.Restaurants", new[] { "PlaceId" });
-            DropIndex("dbo.Restaurants", new[] { "UserId" });
+            DropForeignKey("dbo.Comments", "RestaurantId", "dbo.Restaurants");
+            DropForeignKey("dbo.Comments", "CustomerId", "dbo.Customers");
+            DropIndex("dbo.Reviews", new[] { "RestaurantId" });
+            DropIndex("dbo.Reviews", new[] { "CustomerId" });
+            DropIndex("dbo.Orders", new[] { "OrderListId" });
+            DropIndex("dbo.Orders", new[] { "MealId" });
             DropIndex("dbo.Meals", new[] { "RestaurantId" });
             DropIndex("dbo.Meals", new[] { "CategoryMealId" });
             DropIndex("dbo.Meals", new[] { "KitchenId" });
-            DropIndex("dbo.Orders", new[] { "OrderListId" });
-            DropIndex("dbo.Orders", new[] { "MealId" });
+            DropIndex("dbo.Restaurants", new[] { "PlaceId" });
+            DropIndex("dbo.Restaurants", new[] { "UserId" });
+            DropIndex("dbo.Comments", new[] { "RestaurantId" });
+            DropIndex("dbo.Comments", new[] { "CustomerId" });
             DropIndex("dbo.Customers", new[] { "UserId" });
             DropIndex("dbo.OrderLists", new[] { "User_Id" });
             DropIndex("dbo.OrderLists", new[] { "CustomerId" });
@@ -190,11 +214,12 @@ namespace Osahaneat.Migrations
             DropIndex("dbo.Admins", new[] { "UserId" });
             DropTable("dbo.Reviews");
             DropTable("dbo.Places");
-            DropTable("dbo.Restaurants");
+            DropTable("dbo.Orders");
             DropTable("dbo.Kitchens");
             DropTable("dbo.CategoryMeals");
             DropTable("dbo.Meals");
-            DropTable("dbo.Orders");
+            DropTable("dbo.Restaurants");
+            DropTable("dbo.Comments");
             DropTable("dbo.Customers");
             DropTable("dbo.OrderLists");
             DropTable("dbo.Users");

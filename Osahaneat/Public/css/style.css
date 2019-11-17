@@ -497,7 +497,7 @@ footer #end-footer {
       font-size: 28px;
       font-weight: 300;
       margin-bottom: 40px; }
-    #register .form form p {
+    #register .form form label {
       position: absolute;
       font-size: 12px;
       font-weight: 600;

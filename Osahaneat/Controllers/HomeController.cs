@@ -20,7 +20,7 @@ namespace Osahaneat.Controllers
         public ActionResult Index()
         {
             List<Restaurant> restaurants = context.Restaurants.Include("User").Include("Meals").OrderByDescending(m => m.Meals.Count).Take(10).ToList();
-            List<Meal> meals = context.Meals.Include("Restaurant.User").Include("CategoryMeal").Include("Kitchen").Include("Reviews").OrderByDescending(m => m.Orders.Count).Take(9).ToList();
+            List<Meal> meals = context.Meals.Include("Restaurant.User").Include("CategoryMeal").Include("Restaurant.Reviews").Include("Kitchen").OrderByDescending(m => m.Orders.Count).Take(9).ToList();
 
             //return Content(meals[1].ToString());
             HomePage CR = new HomePage

@@ -158,11 +158,8 @@ C:\Users\CODE\Desktop\OSAHANEAT\Osahaneat\bin\Newtonsoft.Json.xml
 C:\Users\CODE\Desktop\OSAHANEAT\Osahaneat\bin\Antlr3.Runtime.pdb
 C:\Users\CODE\Desktop\OSAHANEAT\Osahaneat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\CODE\Desktop\OSAHANEAT\Osahaneat\obj\Debug\Osahaneat.csprojAssemblyReference.cache
-C:\Users\CODE\Desktop\OSAHANEAT\Osahaneat\obj\Debug\Osahaneat.Migrations.init.resources
-C:\Users\CODE\Desktop\OSAHANEAT\Osahaneat\obj\Debug\Osahaneat.Migrations.updateRestaurantTable.resources
-C:\Users\CODE\Desktop\OSAHANEAT\Osahaneat\obj\Debug\Osahaneat.Migrations.fixbug.resources
-C:\Users\CODE\Desktop\OSAHANEAT\Osahaneat\obj\Debug\Osahaneat.Migrations.fixbug1.resources
-C:\Users\CODE\Desktop\OSAHANEAT\Osahaneat\obj\Debug\Osahaneat.csproj.GenerateResource.cache
 C:\Users\CODE\Desktop\OSAHANEAT\Osahaneat\obj\Debug\Osahaneat.csproj.CopyComplete
 C:\Users\CODE\Desktop\OSAHANEAT\Osahaneat\obj\Debug\Osahaneat.dll
 C:\Users\CODE\Desktop\OSAHANEAT\Osahaneat\obj\Debug\Osahaneat.pdb
+C:\Users\CODE\Desktop\OSAHANEAT\Osahaneat\obj\Debug\Osahaneat.Migrations.init.resources
+C:\Users\CODE\Desktop\OSAHANEAT\Osahaneat\obj\Debug\Osahaneat.csproj.GenerateResource.cache

@@ -19,12 +19,10 @@
                             <p class="address mt-3">
                                 <i class="fas fa-map-marker-alt"></i> @Model.Restaurant.Address @(Model.Restaurant.HolidayOfWeek.IndexOf(DateTime.Now.ToString("ddd"))!=-1?Html.Raw("<span style='background-color:#ff3008'>CLOSED</span>"):(Int32.TryParse(DateTime.Now.ToString("HH"),out int a)&&a>Model.Restaurant.OpenHours&&a<Model.Restaurant.ClooseHours?Html.Raw("<span>OPEN</span>"):Html.Raw("<span style='background-color:#ff3008'>CLOSED</span>")))
                             </p>
-                            <p class="kitchen">
-                                @{string b = "";}
-                                @for (int i = 0; i < Model.categoryName.Count; i++)
+                            <p class="kitchen"><i class="fas fa-university"></i>
+                                @for (int i = 0; i < 3&&Model.categoryName.Count>i; i++)
                                 {
-                                    b=b+Model.categoryName[i] + ", ";
-                                    @(b.Length > 40 ? i = Model.categoryName.Count : i = i;)
+                                   @(i!=0?", ":"") @Model.categoryName[i];
                                 }
                             </p>
                         </div>
@@ -35,9 +33,19 @@
                         <i class="far fa-clock"></i> 25-35 min
                     </span>
                     <p class="reviews">
-                        <span class="star"><i class="fas fa-star"></i> 3.1</span>
-                        <span class="raiting ml-2">23 raiting</span>
-                        <span class="comments ml-4"><i class="fas fa-comments"></i> 91 reviews</span>
+                        <span class="star"><i class="fas fa-star"></i>
+                        @{int c = 0; }
+                        @for (int i = 0; i < Model.Restaurant.Reviews.Count; i++)
+                        {
+                            c += Model.Restaurant.Reviews[i].Rating;
+                            if(i +1== Model.Restaurant.Reviews.Count)
+                            {
+                                @((c / (i+1)));
+                            }
+                        }
+                        </span>
+                        <span class="raiting ml-2">@Model.Restaurant.Reviews.Count raiting</span>
+                        <span class="comments ml-4"><i class="fas fa-comments"></i> @Model.Restaurant.Comments.Count reviews</span>
                     </p>
                 </div>
             </div>

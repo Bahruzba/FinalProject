@@ -29,7 +29,7 @@ namespace Osahaneat.Models
         public Place Place { get; set; }
         public List<Meal> Meals { get; set; }
         public List<OrderList> OrderList { get; set; }
-
-
+        public List<Comment> Comments { get; set; }
+        public List<Review> Reviews { get; set; }
     }
 }

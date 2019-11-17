@@ -19,7 +19,7 @@ namespace Osahaneat.Controllers
         }
         public ActionResult Index(int id)
         {
-            Restaurant restaurant = context.Restaurants.Include("User").Include("Place").Include("Meals").FirstOrDefault(r=>r.Id==id);
+            Restaurant restaurant = context.Restaurants.Include("User").Include("Place").Include("Meals").Include("Reviews").Include("Comments").FirstOrDefault(r=>r.Id==id);
             if (restaurant == null)
             {
                 return HttpNotFound();

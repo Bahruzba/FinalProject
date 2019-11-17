@@ -13,5 +13,7 @@ namespace Osahaneat.Models
         public int UserId { get; set; }
         public User User { get; set; }
         public List<OrderList> OrderLists { get; set; }
+        public List<Comment> Comments { get; set; }
+        public List<Review> Reviews { get; set; }
     }
 }

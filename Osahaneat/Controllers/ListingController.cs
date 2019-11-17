@@ -21,13 +21,12 @@ namespace Osahaneat.Controllers
 
         public ActionResult Index()
         {
-            List<Meal> meals = context.Meals.Include("Restaurant.User").Include("CategoryMeal").Include("Kitchen").Include("Reviews").OrderByDescending(m => m.Orders.Count).Take(9).ToList();
+            List<Meal> meals = context.Meals.Include("Restaurant.User").Include("CategoryMeal").Include("Kitchen").Include("Restaurant.Reviews").OrderByDescending(m => m.Orders.Count).Take(9).ToList();
             List<CategoryMeal> categoryMeals= context.CategoryMeals.OrderByDescending(m=>m.Meals.Count).Take(10).ToList();
-            List<Restaurant> restaurants = context.Restaurants.Include("Meals").Include("User").OrderByDescending(r => r.OrderList.Count).Take(10).ToList();
+            List<Restaurant> restaurants = context.Restaurants.Include("Reviews").Include("Comments").Include("Meals").Include("User").OrderByDescending(r => r.OrderList.Count).Take(10).ToList();
             List<Place> places = context.Places.Include("Restaurants").OrderByDescending(p => p.Restaurants.Count).ToList();
             List<Kitchen> kitchens = context.Kitchens.Include("Meals").OrderBy(k => k.Meals.Count).ToList();
 
-            //return Content(restaurants[1].User.FullName);
             ListingPage MCRPK = new ListingPage
             {
                 meals = meals,
@@ -61,7 +60,7 @@ namespace Osahaneat.Controllers
             {
                 kitchenList = kitchens.Split(',').Select(Int32.Parse).ToList();
             }
-            List<Meal> meals = context.Meals.Include("Restaurant.User").Include("CategoryMeal").Include("Kitchen").Include("Reviews")
+            List<Meal> meals = context.Meals.Include("Restaurant.User").Include("CategoryMeal").Include("Kitchen").Include("Restaurant.Reviews").Include("Restaurant.Comments")
                 .Where(m=>(restorans == ""?true: restaurantList.Contains(m.RestaurantId))&&
                           (categories == ""?true: categoryMeallist.Contains(m.CategoryMealId))&&
                           (places == ""?true: placeList.Contains(m.Restaurant.PlaceId))&&
@@ -82,7 +81,7 @@ namespace Osahaneat.Controllers
                 meals1 = meals.OrderByDescending(m => m.Price).ToList();
             }
 
-            var a = meals1.Skip(count).Take(9).Select(m => new { m.Id, m.Name, category=m.CategoryMeal.Name, kitchen= m.Kitchen.Name, restoran= m.Restaurant.User.FullName, m.Price, m.Reviews.Count, m.Reviews });
+            var a = meals1.Skip(count).Take(9).Select(m => new { m.Id, m.Name, category=m.CategoryMeal.Name, kitchen= m.Kitchen.Name, restoran= m.Restaurant.User.FullName, m.Price, m.Restaurant.Reviews.Count, m.Restaurant.Reviews, m.Restaurant.Comments});
 
             string output = String.Empty;
             foreach (var item in a)
