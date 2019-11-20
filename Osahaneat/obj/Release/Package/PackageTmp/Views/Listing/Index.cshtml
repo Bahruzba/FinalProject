@@ -1,0 +1,192 @@
+﻿@model ListingPage
+@{
+    ViewBag.Title = "Index";
+}
+
+<!-- Start Main -->
+<main>
+    <!-- Start Header Pages section -->
+    <section id="header-pages">
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header-section p-0">
+                        <h1 class="text-white">Offers Near You</h1>
+                        <p class="about-section m-0">Explore top deals and offers exclusively for you!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Header Pages section -->
+
+    <!-- Start Offers section -->
+    <section id="offers">
+        <div class="wrapper">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-between">
+                    <div>
+                        <h4 class="font-weight-bolder">OFFERS <span>299 restaurants</span></h4>
+                    </div>
+                    <div class="dropdown">
+                        <button value class="btn bg-white dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Sırala
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <ul>
+                                <li value="1" class="dropdown-item">Tarixə görə</li>
+                                <li value="2" class="dropdown-item">Əvvəlcə ucuz</li>
+                                <li value="3" class="dropdown-item">Əvvəlcə Bahalı</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row m-0">
+                <div class="col-md-3 p-0">
+                    <div class="filters">
+                        <h5>Filter by</h5>
+                        <div class="item">
+                            <div class="header-tab-menu justify-content-between d-flex">
+                                Restoranlar <div class="text-right"><i class="fas fa-arrow-down"></i></div>
+                            </div>
+                            <div filter="meal" class="body-tab-menu">
+                                <ul>
+                                    @foreach (var item in Model.restaurants)
+                                    {
+                                        <li id="@item.Id">
+                                            <i class="fas fa-check"></i>@item.User.FullName
+                                            <span>(@item.Meals.Count)</span>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item" style="height: 65px">
+                            <div class="header-tab-menu justify-content-between d-flex">
+                                Çeşidlər <div class="text-right"><i class="fas fa-arrow-down"></i></div>
+                            </div>
+                            <div filter="categoryMeal" class="body-tab-menu">
+                                <ul>
+                                    @foreach (var item in Model.meals)
+                                    {
+                                        <li id="@item.Id">
+                                            <i class="fas fa-check"></i>@item.Name
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item" style="height: 65px">
+                            <div class="header-tab-menu justify-content-between d-flex">
+                                Ünvan <div class="text-right"><i class="fas fa-arrow-down"></i></div>
+                            </div>
+                            <div filter=place class="body-tab-menu">
+                                <ul>
+                                    @foreach (var item in Model.places)
+                                    {
+                                        <li id="@item.Id">
+                                            <i class="fas fa-check"></i>@item.Name
+                                            <span>(@item.Restaurants.Count)</span>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="item" style="height: 65px">
+                            <div class="header-tab-menu justify-content-between d-flex">
+                                Mətbəxt <div class="text-right"><i class="fas fa-arrow-down"></i></div>
+                            </div>
+                            <div filter=kitchen class="body-tab-menu">
+                                <ul>
+                                    @foreach (var item in Model.kitchens)
+                                    {
+                                        <li id="@item.Id">
+                                            <i class="fas fa-check"></i>@item.Name
+                                            <span>(@item.Meals.Count)</span>
+                                        </li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filters px-4 py-3 mt-5">
+                        <input type="radio" name="oeder"> &nbsp; Gold Customer <br>
+                        <input type="radio" name="oeder"> &nbsp; Online sifaris <br>
+                        <input type="radio" name="oeder"> &nbsp; Yemek
+                        <p class="text-notification">
+                            Use code OSAHAN50 to get 50% OFF (up to $30) on first 5 orders.
+                            T&Cs apply.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="row mini-slider m-2">
+                        <p class="text-mini-header">E.g. Beverages, Pizzas, Chinese, Bakery, Indian...</p>
+                        <div class="col-lg-12">
+                            <div class="items owl-carousel">
+                                @for(var i=0; i<10;i++)
+                                {
+                                    <div class="item text-center">
+                                        <a href="#">
+                                            <div class="img">
+                                                <img class="w-100" src="~/Public/img/slider.png" alt="">
+                                            </div>
+                                            <h6 class="name-mael">@(Model.categoryMeals[i].Name.Length<12?Model.categoryMeals[i].Name:Model.categoryMeals[i].Name.Substring(0,9)+"...")</h6>
+                                            <h6 class="count-meal">@Model.categoryMeals[i].Meals.Count (çeşid)</h6>
+                                        </a>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row m-2 mt-4 ">
+                        @foreach (var item in Model.meals)
+                        {
+                            <div id="@item.Id" class="item-cover col-md-4 mt-4">
+                                <div class="item">
+                                    <div class="img">
+                                        <a href="#">
+                                            <img src="~/Public/img/slider.png" alt="">
+                                            <span class="promoted">Promoted</span>
+                                            <i class="fas fa-heart"></i>
+                                            <span class="text-center reating">
+                                            <i class="fas fa-star"></i>
+                                            @{var a = 0;}
+                                            @foreach (var review in item.Restaurant.Reviews)
+                                            {
+                                                a += review.Rating;
+                                            }
+                                            @(item.Restaurant.Reviews.Count != 0 ? (a / item.Restaurant.Reviews.Count).ToString("0.0") + " (" + item.Restaurant.Reviews.Count + "+)" : "0 (0)")
+                                            </span>
+                                        </a>
+                                    </div>
+                                    <div class="under-image">
+                                        <a class="name-meal" href="#">@item.Name</a>
+                                        <p class="about-meal">• @item.Restaurant.User.FullName</p>
+                                        <p class="about-meal">• @item.Kitchen.Name</p>
+                                        <p class="about-meal">• @item.CategoryMeal.Name</p>
+                                        <span class="time-delivery"><i class="far fa-clock"></i> 20-25 min </span> <span price="@item.Price.ToString("0.00")" class="priece-delivery">@item.Price AZN</span>
+                                        <p class="cupon">
+                                            <span class="px-2">OFFER</span> 65% off | Use Coupon
+                                            OSAHAN50
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                    <div class="row">
+                        <div class="col-12 text-center mt-5">
+                            <h4 class=" btn more-item">Daha çox yüklə...</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Offers section -->
+
+</main>
+<!-- End Main -->

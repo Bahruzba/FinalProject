@@ -9,7 +9,7 @@ namespace Osahaneat.ViewModels
     public class DetailPage
     {
         public Restaurant Restaurant { get; set; }
-        public List<string> categoryName { get; set; }
+        public List<CategoryMeal> categoryMeal { get; set; }
 
     }
 }

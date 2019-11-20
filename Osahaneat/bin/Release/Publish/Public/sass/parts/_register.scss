@@ -1,0 +1,54 @@
+#register{
+    background-image: url("/img/register.png");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    height: 800px;
+    .form{
+        margin: auto;
+        margin-top: 150px;
+        .header-form-register{
+            font-size: 28px;
+            font-weight: 300;
+            margin-bottom: 40px;
+        }
+        form{
+            p{
+                position: absolute;
+                font-size: 12px;
+                font-weight: 600;
+                color: rgb(68, 68, 68);
+                margin-top: 8px;
+            }
+
+            input{
+                border: 0px;
+                border-bottom: 1px solid rgb(214, 214, 214);
+                border-radius: 0;
+                margin-bottom: 50px;
+                padding: 0;
+            }
+
+            button{
+                border-color: $redcolor;
+                color: $redcolor;
+                font-weight: 700;
+                font-size: 16px;
+                height: 50px;
+            }
+        }
+        .text-center{
+            margin-top: 30px;
+            font-size: 12px;
+            font-weight: 600;
+            a{
+                color: $redcolor;
+                font-weight: 700;
+                &:hover{
+                    text-decoration: none;
+                    color: rgb(99, 99, 189);
+                }
+            }
+        }
+    }
+}

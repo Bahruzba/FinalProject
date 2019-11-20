@@ -1,0 +1,107 @@
+#header-pages{
+    background-color: black;
+    padding: 60px 0;
+    .about-section{
+        font-size: 16px;
+    }
+}
+
+#available-coupons{
+    padding-top: 60px;
+    background-color: #f3f7f8;
+    .items .item{
+        box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+        padding:25px;
+        background-color: white;
+        .cart-icon{
+            border: 1px dotted #daceb7;
+            background-color: #fffae6;
+            width: fit-content;
+            padding: 5px;
+            border-radius: 2px;
+            .img{
+                padding: 2px;
+                width: 25px;
+                &::before{
+                    content: '';
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 6px 5px 0 5px;
+                    border-color: #daceb7 transparent transparent transparent;
+                    position: absolute;
+                    left: 73px;
+                    top: 25px;    
+                }
+                &::after{
+                    content: '';
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 0 5px 6px 5px;
+                    border-color: #daceb7 transparent #daceb7 transparent;                    position: absolute;
+                    left: 73px;
+                    top: 59px;    
+                }
+                img{
+                    margin-top: -3px;
+                    border-radius: 50%;
+                    width: 100%;
+                }
+            }
+            .name-cart{
+                padding: 2px 2px 2px 15px;
+                font-weight: 600;
+                color: #17a2b8;
+            }
+        }
+        h6{
+            color: rgb(124, 124, 124);
+        }
+        .copy-more{
+            a{
+                color: $redcolor;
+                font-weight: 600;
+                transition: 0.2s;
+                &:hover{
+                    color: #0056b3;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+#bank-offers{
+    padding: 60px 0;
+        background-color: #f3f7f8;
+    .item{
+        background-color: white;
+        box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+        padding: 25px;
+        height: 200px;
+        .img{
+            img{
+                width: 100%;
+                border-radius: 50%;
+            }
+        }
+
+        .about-offer{
+            padding-left: 40px;
+            p{
+                color: $graycolor;
+                font-size: 13px;
+                font-weight: 600;
+                line-height: 18px;
+                height: 50px;
+                margin: 15px 0 0 0;
+            }
+            span{
+                font-size: 12px;
+                color: #17a2b8;
+                font-weight: 600;
+            }
+        }
+    }
+}

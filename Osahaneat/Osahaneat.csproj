@@ -2010,6 +2010,8 @@
     <Content Include="Views\Account\Index.cshtml" />
     <Content Include="Views\DATA\Index.cshtml" />
     <Content Include="Views\DATA\Order.cshtml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201911171458456_init.resx">

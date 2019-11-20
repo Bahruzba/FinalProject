@@ -19,23 +19,27 @@ namespace Osahaneat.Controllers
         }
         public ActionResult Index(int id)
         {
-            Restaurant restaurant = context.Restaurants.Include("User").Include("Place").Include("Meals").Include("Reviews").Include("Comments").FirstOrDefault(r=>r.Id==id);
+            Restaurant restaurant = context.Restaurants.Include("User").Include("Place").Include("Meals").Include("Meals.CategoryMeal").Include("Reviews").Include("Comments").FirstOrDefault(r=>r.Id==id);
             if (restaurant == null)
             {
                 return HttpNotFound();
             }
             List<string> categoryName = new List<string>();
+            List<CategoryMeal> catMeal = new List<CategoryMeal>();
+
             foreach (var meal in restaurant.Meals)
             {
                 if (!categoryName.Contains(meal.Name))
                 {
                     categoryName.Add(meal.Name);
+                    catMeal.Add(meal.CategoryMeal);
+
                 }
             }
             DetailPage detailPage = new DetailPage
             {
                 Restaurant = restaurant,
-                categoryName = categoryName
+                categoryMeal = catMeal
             };
 
             return View(detailPage);
