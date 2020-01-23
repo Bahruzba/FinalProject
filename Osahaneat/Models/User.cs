@@ -32,6 +32,10 @@ namespace Osahaneat.Models
         [Required(ErrorMessage = "Xananı doldurun.")]
         public DateTime Created { get; set; }
         public List<OrderList> OrderLists { get; set; }
+<<<<<<< HEAD
+=======
+        public List<Review> Reviews { get; set; }
+>>>>>>> change reviews structure
         [Required]
         public bool IsActived { get; set; }
         public UserType UserType { get; set; }

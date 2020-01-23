@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿$('.owl-carousel').slick({
     infinite: true,
     slidesToShow: 8,
@@ -75,15 +76,70 @@ $('#popular-brands .owl-carouse').slick({
 
 $(document).ready(function () {
     
+=======
+﻿$(document).ready(function () {
+
+//Owl Carousel
+    $("#Find-awesome-deals .col-md-4 .owl-carousel").owlCarousel({
+    autoPlay: true,
+    slideSpeed: 300,
+    nav: true,
+    navText: ["<img src='../Public/img/left.png'>", "<img src='../Public/img/right.png'>"],
+    loop: true,
+    items: 1
+});
+
+    $("#Find-awesome-deals .mini-slider .owl-carousel").owlCarousel({
+        autoPlay: true,
+        loop: true,
+        nav: true,
+        navText: ["<img src='../Public/img/left.png' width='40px' height='40px'>", "<img src = '../Public/img/right.png' width='40px' height = '40px'>"],
+        items: 8,
+        dods: false
+    });
+
+    $("#offer .owl-carousel").owlCarousel({
+        autoPlay: true,
+        loop: true,
+        items: 4,
+        nav: true,
+        navText: ["<img src='../Public/img/left.png'>", "<img src='../Public/img/right.png'>"]
+    })
+
+    $("#popular-brands .owl-carousel").owlCarousel({
+        items: 4
+    });
+
+    $(".body-order-online .owl-carousel").owlCarousel({
+        autoPlay: true,
+        loop: true,
+        items: 4,
+        nav: true,
+        navText: ["<img src='/Public/img/left.png' width='40px' height='40px'>", "<img src = '/Public/img/right.png' width='40px' height = '40px'>"],
+    });
+
+    $(".body-gallery .owl-carousel").owlCarousel({
+        autoPlay: true,
+        loop: true,
+        items: 4,
+        nav: true,
+        navText: ["<img src='/Public/img/left.png' width='40px' height='40px'>", "<img src = '/Public/img/right.png' width='40px' height = '40px'>"],
+    });
+
+>>>>>>> change reviews structure
 $(".form form input").on("input", function(){
     var x=Math.round($(this).position().top);
     if($(this).val()==""){
         $(this).prev().animate({top:x+2+"px",fontSize:"12px", opacity:"1"},150);
         return;
     }
+<<<<<<< HEAD
     // if($(this).val()==""){
     //     return;
     // }
+=======
+
+>>>>>>> change reviews structure
     $(this).prev().animate({top:x-12+"px",fontSize:"10px", opacity:"0.7"},150);
 });
 
@@ -143,7 +199,11 @@ $.ajax({
     },
     success: (function (response) {
         $("#offers .mini-slider").next().html(response);
+<<<<<<< HEAD
         $("#offers .more-item").removeClass("disabled pl-5 item-not-found").text("Daha çox yüklə...");
+=======
+        $("#offers .more-item").removeClass("disabled pl-5 itepom-not-found").text("Daha çox yüklə...");
+>>>>>>> change reviews structure
         var count1 = $("#offers .mini-slider").next().children(".item-cover").length;
         if (count1 < 9) {
             $("#offers .more-item").addClass("item-not-found").text("Məhsul siyahısı bitti :)");
@@ -200,7 +260,11 @@ $(document).on("click", "#offers .item .body-tab-menu i", function(){
     })
 })
 
+<<<<<<< HEAD
 //For more item im pffers page
+=======
+//For more item im offers page
+>>>>>>> change reviews structure
 $(document).on("click", "#offers .more-item", function () {
     var restorans = "";
     $("#offers [filter=meal] .select").parent().each(function () { restorans += "," + ($(this).attr("id")); });
@@ -379,6 +443,9 @@ $("#account .account .tab-header li").click(function(){
     }, 400);
 
 })
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> change reviews structure
 });

@@ -31,5 +31,9 @@ namespace Osahaneat.Models
         public int RestaurantId { get; set; }
         public Restaurant Restaurant { get; set; }
         public List<Order> Orders { get; set; }
+<<<<<<< HEAD
+=======
+        public List<Review> Reviews { get; set; }
+>>>>>>> change reviews structure
     }
 }

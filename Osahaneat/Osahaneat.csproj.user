@@ -3,9 +3,16 @@
   <PropertyGroup>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
+<<<<<<< HEAD
     <IISExpressSSLPort>44315</IISExpressSSLPort>
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
+=======
+    <IISExpressSSLPort>
+    </IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
+>>>>>>> change reviews structure
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <LastActiveSolutionConfig>Debug|Any CPU</LastActiveSolutionConfig>
@@ -20,6 +27,10 @@
     <WebStackScaffolding_ViewDialogWidth>600</WebStackScaffolding_ViewDialogWidth>
     <WebStackScaffolding_AreaDialogWidth>600</WebStackScaffolding_AreaDialogWidth>
     <NameOfLastUsedPublishProfile>FolderProfile1</NameOfLastUsedPublishProfile>
+<<<<<<< HEAD
+=======
+    <ProjectView>ProjectFiles</ProjectView>
+>>>>>>> change reviews structure
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 namespace Osahaneat.Migrations
+=======
+﻿namespace Osahaneat.Migrations
+>>>>>>> change reviews structure
 {
     using System;
     using System.Data.Entity;
@@ -16,7 +20,11 @@ namespace Osahaneat.Migrations
         {
             //  This method will be called after migrating to the latest version.
 
+<<<<<<< HEAD
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
+=======
+            //  You can use the DbSet<T>.AddOrUpdate() helper extension method
+>>>>>>> change reviews structure
             //  to avoid creating duplicate seed data.
         }
     }

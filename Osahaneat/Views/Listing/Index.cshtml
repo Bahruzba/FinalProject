@@ -19,7 +19,10 @@
         </div>
     </section>
     <!-- End Header Pages section -->
+<<<<<<< HEAD
 
+=======
+>>>>>>> change reviews structure
     <!-- Start Offers section -->
     <section id="offers">
         <div class="wrapper">
@@ -126,14 +129,22 @@
                         <p class="text-mini-header">E.g. Beverages, Pizzas, Chinese, Bakery, Indian...</p>
                         <div class="col-lg-12">
                             <div class="items owl-carousel">
+<<<<<<< HEAD
                                 @for(var i=0; i<10;i++)
+=======
+                                @for (var i = 0; i < 10; i++)
+>>>>>>> change reviews structure
                                 {
                                     <div class="item text-center">
                                         <a href="#">
                                             <div class="img">
                                                 <img class="w-100" src="~/Public/img/slider.png" alt="">
                                             </div>
+<<<<<<< HEAD
                                             <h6 class="name-mael">@(Model.categoryMeals[i].Name.Length<12?Model.categoryMeals[i].Name:Model.categoryMeals[i].Name.Substring(0,9)+"...")</h6>
+=======
+                                            <h6 class="name-mael">@(Model.categoryMeals[i].Name.Length < 12 ? Model.categoryMeals[i].Name : Model.categoryMeals[i].Name.Substring(0, 9) + "...")</h6>
+>>>>>>> change reviews structure
                                             <h6 class="count-meal">@Model.categoryMeals[i].Meals.Count (çeşid)</h6>
                                         </a>
                                     </div>
@@ -147,11 +158,16 @@
                             <div id="@item.Id" class="item-cover col-md-4 mt-4">
                                 <div class="item">
                                     <div class="img">
+<<<<<<< HEAD
                                         <a href="#">
+=======
+                                        <a href="@Url.Action("index","detail", new {id = item.Id})">
+>>>>>>> change reviews structure
                                             <img src="~/Public/img/slider.png" alt="">
                                             <span class="promoted">Promoted</span>
                                             <i class="fas fa-heart"></i>
                                             <span class="text-center reating">
+<<<<<<< HEAD
                                             <i class="fas fa-star"></i>
                                             @{var a = 0;}
                                             @foreach (var review in item.Restaurant.Reviews)
@@ -159,6 +175,15 @@
                                                 a += review.Rating;
                                             }
                                             @(item.Restaurant.Reviews.Count != 0 ? (a / item.Restaurant.Reviews.Count).ToString("0.0") + " (" + item.Restaurant.Reviews.Count + "+)" : "0 (0)")
+=======
+                                                <i class="fas fa-star"></i>
+                                                @{var a = 0;}
+                                                @foreach (var review in item.Reviews)
+                                                {
+                                                    a += review.Rating;
+                                                }
+                                                @(item.Reviews.Count != 0 ? (a / item.Reviews.Count).ToString("0.0") + " (" + item.Reviews.Count + "+)" : "0 (0)")
+>>>>>>> change reviews structure
                                             </span>
                                         </a>
                                     </div>
