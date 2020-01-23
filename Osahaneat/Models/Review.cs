@@ -9,18 +9,11 @@ namespace Osahaneat.Models
     {
         public int Id { get; set; }
         public int Rating { get; set; }
-<<<<<<< HEAD
-        public int CustomerId { get; set; }
-        public Customer Customer { get; set; }
-        public int RestaurantId { get; set; }
-        public Restaurant Restaurant { get; set; }
-=======
         public string Comment { get; set; }
         public DateTime Create { get; set; }
         public int CustomerId { get; set; }
         public Customer Customer { get; set; }
         public int MealId { get; set; }
         public Meal Meal { get; set; }
->>>>>>> change reviews structure
     }
 }

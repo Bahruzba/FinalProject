@@ -106,18 +106,6 @@ namespace Osahaneat.Controllers
                     context.Admins.Add(admin);
                     context.SaveChanges();
 
-<<<<<<< HEAD
-                    Review review = new Review
-                    {
-                        Rating = 4,
-                        RestaurantId = restaurant.Id,
-                        CustomerId = customer.Id
-
-                    };
-                    context.Reviews.Add(review);
-                    context.SaveChanges();
-=======
->>>>>>> change reviews structure
                 }
 
                 Meal meal = new Meal
@@ -133,16 +121,6 @@ namespace Osahaneat.Controllers
                 context.Meals.Add(meal);
                 context.SaveChanges();
 
-<<<<<<< HEAD
-                Comment comment = new Comment
-                {
-                    RestaurantId = (i - i % 5) / 5 + 1,
-                    CustomerId= (i - i % 5) / 5 + 1,
-                    Context="Sagolsunlar tez catdirillar."
-                };
-                context.Comments.Add(comment);
-                context.SaveChanges();
-=======
             Review review = new Review
             {
                 Comment="Canavardi",
@@ -154,7 +132,6 @@ namespace Osahaneat.Controllers
             };
             context.Reviews.Add(review);
             context.SaveChanges();
->>>>>>> change reviews structure
             }
             return View();
         }

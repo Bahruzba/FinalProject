@@ -26,10 +26,10 @@
                     <form method="post" action="">
                         @Html.LabelFor(m => m.FullName)
                         @Html.TextBoxFor(m => m.FullName, null, new { @class = "form-control" })
+                        @Html.LabelFor(m => m.UserName)
+                        @Html.TextBoxFor(m => m.UserName, null, new { @class = "form-control" })
                         @Html.LabelFor(m => m.Password)
                         @Html.TextBoxFor(m => m.Password, null, new { @class = "form-control" })
-                        @Html.LabelFor(m => m.FullName)
-                        @Html.TextBoxFor(m => m.FullName, null, new { @class = "form-control" })
 
                         <input name="promocode" type="text" class="form-control">
                         <button type="submit" class="form-control">SING UP</button>

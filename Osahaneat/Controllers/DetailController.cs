@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-<<<<<<< HEAD
-=======
 using System.Data.Entity;
->>>>>>> change reviews structure
 using System.Web;
 using System.Web.Mvc;
 using Osahaneat.Models;
@@ -23,9 +20,6 @@ namespace Osahaneat.Controllers
         }
         public ActionResult Index(int id)
         {
-<<<<<<< HEAD
-            Restaurant restaurant = context.Restaurants.Include("User").Include("Place").Include("Meals").Include("Meals.CategoryMeal").Include("Reviews").Include("Comments").FirstOrDefault(r=>r.Id==id);
-=======
             Restaurant restaurant = context.Restaurants
                 .Include(r => r.User)
                 .Include(r => r.Place)
@@ -33,7 +27,6 @@ namespace Osahaneat.Controllers
                 .Include("Meals.CategoryMeal")
                 .Include("Meals.Reviews")
                 .FirstOrDefault(r => r.Id == id);
->>>>>>> change reviews structure
             if (restaurant == null)
             {
                 return HttpNotFound();
@@ -55,10 +48,6 @@ namespace Osahaneat.Controllers
                 Restaurant = restaurant,
                 categoryMeal = catMeal
             };
-<<<<<<< HEAD
-
-=======
->>>>>>> change reviews structure
             return View(detailPage);
         }
     }

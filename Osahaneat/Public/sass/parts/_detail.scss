@@ -1,9 +1,5 @@
 #header-restaurant{
-<<<<<<< HEAD
-    background-image: url('/img/img-restaurant.png');
-=======
     background-image: url("../../public/img/img-restaurant.png");
->>>>>>> change reviews structure
     background-size: cover;
     height: 424px;
     box-shadow: inset 0px -12rem 150px -96px rgba(0, 0, 0, 0.8);
@@ -24,22 +20,16 @@
             padding: 1px 6px;
         }
     }
-<<<<<<< HEAD
 
-=======
->>>>>>> change reviews structure
     .delivery-time{
         background-color: $greencolor;
         padding: 10px 20px;
         border-radius: 3px;
     }
     .reviews{
-<<<<<<< HEAD
-=======
         display: flex;
         align-items: center;
         justify-content: flex-end;
->>>>>>> change reviews structure
         margin-top: 30px;
         .star{
             background-color: #ff5e00;
@@ -206,8 +196,6 @@
                     }
                 }
             }
-<<<<<<< HEAD
-=======
             .owl-carousel .owl-prev{
                 position: absolute;
                 top: 90px;
@@ -218,7 +206,6 @@
                 top: 90px;
                 right: -45px;
             }
->>>>>>> change reviews structure
             .best-sellers{
                 .item{
                     box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
@@ -339,11 +326,7 @@
                     color: $redcolor;
                 }
             }
-<<<<<<< HEAD
-            button{
-=======
             .add{
->>>>>>> change reviews structure
                 padding-right: 8px;
                 height: 30px;
                 background-color: transparent;
@@ -352,13 +335,10 @@
                 border: 1px solid;
                 margin: -2px 10px 0 0;
                 transition: 0.1s;
-<<<<<<< HEAD
-=======
                 &:hover{
                     color: white;
                     background-color: gray;
                 }
->>>>>>> change reviews structure
             }
             .count-item{
                 button{
@@ -373,14 +353,6 @@
                     color: white;
                 }
             }
-<<<<<<< HEAD
-            button:hover{
-                color: white;
-                background-color: gray;
-            }
-=======
-            
->>>>>>> change reviews structure
             [disabled]:hover{
                 background-color: transparent;
             }
@@ -388,11 +360,7 @@
         .body-gallery{
             margin: 30px;
             box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);        
-<<<<<<< HEAD
-            .slider{
-=======
             .owl-carousel{
->>>>>>> change reviews structure
                 background-color: white;
                 padding: 15px;
                 border-radius: 3px;

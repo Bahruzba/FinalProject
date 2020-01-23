@@ -1,9 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-<<<<<<< HEAD
-=======
-  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
->>>>>>> change reviews structure
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -22,16 +18,10 @@
     <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
-<<<<<<< HEAD
-    <IISExpressSSLPort>44315</IISExpressSSLPort>
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
-=======
     <IISExpressSSLPort>
     </IISExpressSSLPort>
     <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
     <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
->>>>>>> change reviews structure
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
@@ -57,17 +47,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-<<<<<<< HEAD
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-=======
       <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
->>>>>>> change reviews structure
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -164,23 +147,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helper\Auth.cs" />
-<<<<<<< HEAD
-    <Compile Include="Migrations\201911171458456_init.cs" />
-    <Compile Include="Migrations\201911171458456_init.Designer.cs">
-      <DependentUpon>201911171458456_init.cs</DependentUpon>
-=======
     <Compile Include="Migrations\202001220522240_Init.cs" />
     <Compile Include="Migrations\202001220522240_Init.designer.cs">
       <DependentUpon>202001220522240_Init.cs</DependentUpon>
->>>>>>> change reviews structure
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\CategoryMeal.cs" />
-<<<<<<< HEAD
-    <Compile Include="Models\Comment.cs" />
-=======
->>>>>>> change reviews structure
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Kitchen.cs" />
     <Compile Include="Models\Meal.cs" />
@@ -1802,10 +1775,6 @@
     <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-<<<<<<< HEAD
-=======
-    <Content Include="Public\css\owl.carousel.min.css" />
->>>>>>> change reviews structure
     <Content Include="Public\css\style.css" />
     <Content Include="Public\img\appstore.png" />
     <Content Include="Public\img\baxa.jpg" />
@@ -1817,13 +1786,10 @@
     <Content Include="Public\img\register.png" />
     <Content Include="Public\img\slider.png" />
     <Content Include="Public\img\wallet.png" />
-<<<<<<< HEAD
-=======
     <Content Include="Public\js\Bootstrap v4.4.1.min.js" />
     <Content Include="Public\js\jQuery v3.4.1 .min.js" />
     <Content Include="Public\js\owl.carousel.min.js" />
     <Content Include="Public\js\popperjs v2.0.0.min.js" />
->>>>>>> change reviews structure
     <Content Include="Public\js\script.js" />
     <Content Include="Public\sass\grid.css" />
     <Content Include="Public\sass\style.css" />
@@ -2050,18 +2016,11 @@
     <Content Include="Views\DATA\Order.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
-<<<<<<< HEAD
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201911171458456_init.resx">
-      <DependentUpon>201911171458456_init.cs</DependentUpon>
-=======
     <Content Include="Public\css\Bootstrap v4.4.1.min.css" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202001220522240_Init.resx">
       <DependentUpon>202001220522240_Init.cs</DependentUpon>
->>>>>>> change reviews structure
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
@@ -2082,11 +2041,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>59988</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-<<<<<<< HEAD
-          <IISUrl>https://localhost:44315/</IISUrl>
-=======
           <IISUrl>http://localhost:44315/</IISUrl>
->>>>>>> change reviews structure
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -2101,14 +2056,10 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
-<<<<<<< HEAD
-  </Target>
-=======
     <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
     <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
   </Target>
   <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
->>>>>>> change reviews structure
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

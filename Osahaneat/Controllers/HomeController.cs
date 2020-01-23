@@ -4,10 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-<<<<<<< HEAD
-=======
 using System.Data.Entity;
->>>>>>> change reviews structure
 using System.Web.Mvc;
 using Osahaneat.ViewModels;
 
@@ -23,12 +20,10 @@ namespace Osahaneat.Controllers
         // GET: Home
         public ActionResult Index()
         {
-            List<Restaurant> restaurants = context.Restaurants.Include("User").Include("Meals").OrderByDescending(m => m.Meals.Count).Take(10).ToList();
-<<<<<<< HEAD
-            List<Meal> meals = context.Meals.Include("Restaurant.User").Include("CategoryMeal").Include("Restaurant.Reviews").Include("Kitchen").OrderByDescending(m => m.Orders.Count).Take(9).ToList();
-
-            //return Content(meals[1].ToString());
-=======
+            List<Restaurant> restaurants = context.Restaurants
+            .Include(r => r.User)
+            .Include(r => r.Meals)
+            .OrderByDescending(m => m.Meals.Count).Take(10).ToList();
             List<Meal> meals = context.Meals
                 .Include(m=>m.Restaurant.User)
                 .Include(m => m.CategoryMeal)
@@ -36,7 +31,6 @@ namespace Osahaneat.Controllers
                 .Include(m => m.Kitchen)
                 .OrderByDescending(m => m.Orders.Count).Take(9).ToList();
 
->>>>>>> change reviews structure
             HomePage CR = new HomePage
             {
                 meals=meals,

@@ -13,10 +13,6 @@ namespace Osahaneat.Models
         public int UserId { get; set; }
         public User User { get; set; }
         public List<OrderList> OrderLists { get; set; }
-<<<<<<< HEAD
-        public List<Comment> Comments { get; set; }
-=======
->>>>>>> change reviews structure
         public List<Review> Reviews { get; set; }
     }
 }

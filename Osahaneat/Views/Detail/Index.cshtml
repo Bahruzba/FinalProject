@@ -17,21 +17,12 @@
                         <div class="col-9 p-0 text-white">
                             <h2>@Model.Restaurant.User.FullName</h2>
                             <p class="address mt-3">
-<<<<<<< HEAD
-                                <i class="fas fa-map-marker-alt"></i> @Model.Restaurant.Address @(Model.Restaurant.HolidayOfWeek.IndexOf(DateTime.Now.ToString("ddd"))!=-1?Html.Raw("<span style='background-color:#ff3008'>CLOSED</span>"):(Int32.TryParse(DateTime.Now.ToString("HH"),out int a)&&a>Model.Restaurant.OpenHours&&a<Model.Restaurant.ClooseHours?Html.Raw("<span>OPEN</span>"):Html.Raw("<span style='background-color:#ff3008'>CLOSED</span>")))
-                            </p>
-                            <p class="kitchen"><i class="fas fa-university"></i>
-                                @for (int i = 0; i < 3&&Model.categoryMeal.Count>i; i++)
-                                {
-                                   @(i!=0?", ":"") @Model.categoryMeal[i];
-=======
                                 <i class="fas fa-map-marker-alt"></i> @Model.Restaurant.Address @(Model.Restaurant.HolidayOfWeek.IndexOf(DateTime.Now.ToString("ddd")) != -1 ? Html.Raw("<span style='background-color:#ff3008'>CLOSED</span>") : (Int32.TryParse(DateTime.Now.ToString("HH"), out int a) && a > Model.Restaurant.OpenHours && a < Model.Restaurant.ClooseHours ? Html.Raw("<span>OPEN</span>") : Html.Raw("<span style='background-color:#ff3008'>CLOSED</span>")))
                             </p>
                             <p class="kitchen"><i class="fas fa-university"></i>
                                 @for (int i = 0; i < 3 && Model.categoryMeal.Count > i; i++)
                                 {
                                    @(i != 0 ? ", " : "") @Model.categoryMeal[i].Name;
->>>>>>> change reviews structure
                                 }
                             </p>
                         </div>
@@ -43,20 +34,6 @@
                     </span>
                     <p class="reviews">
                         <span class="star"><i class="fas fa-star"></i>
-<<<<<<< HEAD
-                        @{int c = 0; }
-                        @for (int i = 0; i < Model.Restaurant.Reviews.Count; i++)
-                        {
-                            c += Model.Restaurant.Reviews[i].Rating;
-                            if(i +1== Model.Restaurant.Reviews.Count)
-                            {
-                                @((c / (i+1)));
-                            }
-                        }
-                        </span>
-                        <span class="raiting ml-2">@Model.Restaurant.Reviews.Count raiting</span>
-                        <span class="comments ml-4"><i class="fas fa-comments"></i> @Model.Restaurant.Comments.Count reviews</span>
-=======
                         @{
                             int d=0;
                             int c = Model.Restaurant.Meals.Sum(m => m.Reviews.Count);
@@ -66,7 +43,6 @@
                         </span>
                         <span class="raiting ml-2">@(Math.Round(e)) raiting</span>
                         <span class="comments ml-4"><i class="fas fa-comments"></i> @c reviews</span>
->>>>>>> change reviews structure
                     </p>
                 </div>
             </div>
@@ -129,26 +105,7 @@
                         <h4 class="header-items">Best Sellers</h4>
                         <div class="best-sellers mb-4">
                             <div class="row">
-<<<<<<< HEAD
-                                <div class="col-sm-4">
-                                    <div class="item">
-                                        <div class="img text-white">
-                                            <img src="~/Public/img/slider.png" alt="">
-                                            <span class="promoted">Promoted</span>
-                                            <i class="fas fa-heart"></i>
-                                            <span class="reating"><i class="fas fa-star"></i> 3.1 (300+)</span>
-                                        </div>
-                                        <div class="about-item">
-                                            <h6>Vəşi burger</h6>
-                                            <small>Gədəbəy mətbəxti</small>
-                                            <div class="justify-content-between d-flex pt-2">
-                                                <p>$55 <span>NEW</span></p>
-                                                <button class="add text-right">ADD</button>
-                                                <div class="count-item d-none">
-                                                    <button class="minus">-</button>
-                                                    <button max="5" class="count">1</button>
-                                                    <button class="plus">+</button>
-=======
+
                                 @foreach (var re in Model.Restaurant.Meals)
                                 {
                                     <div class="col-sm-4 mb-4">
@@ -170,17 +127,12 @@
                                                         <button max="5" class="count">1</button>
                                                         <button class="plus">+</button>
                                                     </div>
->>>>>>> change reviews structure
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-<<<<<<< HEAD
-                                </div>
-=======
                                 }
 
->>>>>>> change reviews structure
                                 <div class="col-sm-4">
                                     <div class="item">
                                         <div class="img text-white">
@@ -204,10 +156,6 @@
                                         </div>
                                     </div>
                                 </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> change reviews structure
                                 <div class="col-sm-4">
                                     <div class="item">
                                         <div class="img text-white">
@@ -322,11 +270,7 @@
                         </div>
                     </div>
                     <div tab-body="gallery" class="body-gallery d-none">
-<<<<<<< HEAD
-                        <div class="slider">
-=======
                         <div class="owl-carousel">
->>>>>>> change reviews structure
                             <div class="img"><img src="~/Public/img/slider.png" alt=""></div>
                             <div class="img"><img src="~/Public/img/slider.png" alt=""></div>
                             <div class="img"><img src="~/Public/img/slider.png" alt=""></div>
@@ -610,63 +554,6 @@
                     </div>
                     <div class="your-order">
                         <h5>
-<<<<<<< HEAD
-                            Your Order</h4>
-                            <h6>6 ITEMS</h6>
-                            <div class="items">
-                                <div class="item justify-content-between align-items-center d-flex">
-                                    <div>
-                                        <i class="fas fa-circle"></i>
-                                        <p>Chicken Tikka Sub</p>
-                                    </div>
-                                    <button class="add text-right">ADD</button>
-                                    <div class="count-item d-none">
-                                        <button class="minus">&minus;</button>
-                                        <button max="5" class="count">1</button>
-                                        <button class="plus">+</button>
-                                        <span>$555</span>
-                                    </div>
-                                </div>
-                                <div class="item justify-content-between align-items-center d-flex">
-                                    <div>
-                                        <i class="fas fa-circle"></i>
-                                        <p>Chicken Tikka Sub</p>
-                                    </div>
-                                    <button class="add text-right">ADD</button>
-                                    <div class="count-item d-none">
-                                        <button class="minus">&minus;</button>
-                                        <button max="5" class="count">1</button>
-                                        <button class="plus">+</button>
-                                        <span>$555</span>
-                                    </div>
-                                </div>
-                                <div class="item justify-content-between align-items-center d-flex">
-                                    <div>
-                                        <i class="fas fa-circle"></i>
-                                        <p>Chicken Tikka Sub</p>
-                                    </div>
-                                    <button class="add text-right">ADD</button>
-                                    <div class="count-item d-none">
-                                        <button class="minus">&minus;</button>
-                                        <button max="5" class="count">1</button>
-                                        <button class="plus">+</button>
-                                        <span>$555</span>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="total d-flex justify-content-between">
-                                <div class="img">
-                                    <img src="~/Public/img/wallet.png" alt="">
-                                </div>
-                                <div class="total-price text-right">
-                                    <h5>Subtotal: <span>$456.4</span></h5>
-                                    <small>Extra charges may apply</small>
-                                    <p>You have saved $ 955 on the bill</p>
-                                </div>
-                            </div>
-                            <a class="btn" href="#">Checkout &#x2192;</a>
-=======
                             Your Order
                         </h5>
                         <h6>6 ITEMS</h6>
@@ -723,7 +610,6 @@
                             </div>
                         </div>
                         <a class="btn" href="#">Checkout &#x2192;</a>
->>>>>>> change reviews structure
                     </div>
                 </div>
             </div>

@@ -29,10 +29,5 @@ namespace Osahaneat.Models
         public Place Place { get; set; }
         public List<Meal> Meals { get; set; }
         public List<OrderList> OrderList { get; set; }
-<<<<<<< HEAD
-        public List<Comment> Comments { get; set; }
-        public List<Review> Reviews { get; set; }
-=======
->>>>>>> change reviews structure
     }
 }
